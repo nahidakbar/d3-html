@@ -1,0 +1,19 @@
+{
+  "name": "d3-html",
+  "version": "0.0.2",
+  "description": "verbose helper functions to make d3-selection bit less verbose for general html creation and manipulation",
+  "main": "d3-html.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nahidakbar/d3-html.git"
+  },
+  "author": "Nahid Akbar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nahidakbar/d3-html/issues"
+  },
+  "homepage": "https://github.com/nahidakbar/d3-html#readme"
+}
