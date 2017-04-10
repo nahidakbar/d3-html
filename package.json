@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/nahidakbar/d3-html/issues"
   },
-  "homepage": "https://github.com/nahidakbar/d3-html#readme",
-  "devDependencies": {
-    "d3-selection": "^1.0.5"
-  }
+  "homepage": "https://github.com/nahidakbar/d3-html#readme"
 }

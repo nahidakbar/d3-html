@@ -1,6 +1,6 @@
 "use strict";
 
-var selection = window && window.d3 && d3.selection || require("d3-selection").selection;
+var selection = window.d3 && window.d3.selection || require("d3-selection").selection;
 
 // common operations
 
@@ -22,7 +22,7 @@ function ToD3HtmlName(name) {
   return name.toLowerCase().split('-').map(function(fragment)
   {
     return fragment.substr(0, 1).toUpperCase() + fragment.substr(1);
-  });
+  }).join('');
 }
 
 // common elements https://www.w3schools.com/TAgs/
