@@ -288,6 +288,7 @@ selection.prototype.Options = function (options, selected)
   'autocomplete',
   'autofocus',
   'checked',
+  'class',
   'cols',
   'colspan',
   'disabled',
@@ -300,16 +301,18 @@ selection.prototype.Options = function (options, selected)
   'media',
   'method',
   'name',
+  'placeholder',
   'rowspan',
   'src',
   'selected',
   'tabindex',
-  'title'
+  'title',
+  'value'
 ].forEach(function (type)
 {
-  selection.prototype[ToD3HtmlName(type)] = function (value, capture)
+  selection.prototype[ToD3HtmlName(type)] = function(value)
   {
-    return this.on(type, value, capture);
+    return this.attr(type, value);
   };
 });
 
@@ -474,7 +477,7 @@ selection.prototype.Options = function (options, selected)
 
 // enter / exit wrapper
 
-selection.prototype.Children = function(arrayData, childElementTagName, updateCallback, transition)
+selection.prototype.Children = function(arrayData, childElementTagName, updateCallback)
 {
   var parent = this;
   // remove stray elements
@@ -486,18 +489,8 @@ selection.prototype.Children = function(arrayData, childElementTagName, updateCa
     .data(arrayData);
   rows.exit()
     .remove(); // Note: not transitioning here as the effect is a bit weird.
-  if (transition)
-  {
-    updateCallback(rows.enter()
-      .append(childElementTagName)
-      .transition(transition), true);
-    updateCallback(rows.transition(transition), false);
-  }
-  else
-  {
-    updateCallback(rows.enter()
-      .append(childElementTagName), true);
-    updateCallback(rows, false);
-  }
+  updateCallback(rows.enter()
+    .append(childElementTagName), true);
+  updateCallback(rows, false);
   return this;
 }
