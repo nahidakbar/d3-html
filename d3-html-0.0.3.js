@@ -186,8 +186,8 @@ selection.prototype.Options = function (options, selected)
   }
   else
   {
-    return this.Children(Object.keys(options), 'option', elem => {
-      elem.html(i => options[i])
+    return this.Children(Object.keys(options), 'option', function(elem) {
+      elem.html(function(i) { return options[i] })
         .attr('value', id)
         .attr('selected', function(i) {
          return ((i === selected || options[i] === selected)? 'selected' : null);

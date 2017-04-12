@@ -1,6 +1,6 @@
 {
   "name": "d3-html",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "verbose helper functions to make d3-selection bit less verbose for general html creation and manipulation",
   "main": "d3-html-0.0.3.js",
   "scripts": {
