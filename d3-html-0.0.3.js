@@ -526,32 +526,32 @@ d3.HashStateRouter = function(context)
   
   context.Link = function(page, params)
   {
-    var output = '';
-    output += '#' + page + '?';
+    var output = '?';
     for (var param in params)
     {
       output += param + '=' + params[page] + '&';
     }
-    return output.replace(/[?&]$/, '');
+    output = output.replace(/[?&]$/, '');
+    output += '#' + page;
+    return output.replace(/[#]$/, '');
   };
 
   context.Reload = function () {
-    var input = (window.location.hash || "").substr(1);
+    var page = (window.location.hash || "#").substr(1);
     var params = {};
-    if(input.indexOf('?') !== -1)
+    if(window.location.search)
     {
-      input.substr(input.indexOf('?') + 1).split('&').map(function(x)
+      window.location.search.substr(1).split('&').map(function(x)
       {
         return x.split('=', 2);
       }).forEach(function(fragment)
       {
         params[fragment[0]] = fragment[1] || true;
       });
-      input = input.substr(0, input.indexOf('?'));
     }
-    context.page = input;
+    context.page = page;
     context.params = params;
-    (context.pages[input] || context.pages['404'])(context);
+    (context.pages[page] || context.pages['404'])(context);
   };
   
   context.page = context.page || '';
