@@ -1,6 +1,7 @@
 "use strict";
 
-var selection = window.d3 && window.d3.selection || require("d3-selection").selection;
+var d3 = window.d3 || require("d3-selection");
+var selection = d3.selection;
 
 // common operations
 
@@ -494,3 +495,68 @@ selection.prototype.Children = function(arrayData, childElementTagName, updateCa
   updateCallback(rows, false);
   return this;
 }
+
+
+d3.HashStateRouter = function(context)
+{
+  context.State = function(param, value)
+  {
+    if (arguments.length > 1)
+    {
+      if (!value)
+      {
+        value = undefined;
+      }
+      context.params[param] = value;
+      history.pushState({}, document.title, context.link(context.page, context.params));
+    }
+    return context.params[param] || '';
+  };
+
+  context.StateChangeLink = function(param, value)
+  {
+    var params = {};
+    for (var field in context.params)
+    {
+      params[field] = context.params[field];
+    }
+    params[param] = value;
+    return context.Link(context.page, params)
+  };
+  
+  context.Link = function(page, params)
+  {
+    var output = '';
+    output += '#' + page + '?';
+    for (var param in params)
+    {
+      output += param + '=' + params[page] + '&';
+    }
+    return output.replace(/[?&]$/, '');
+  };
+
+  context.Reload = function () {
+    var input = (window.location.hash || "").substr(1);
+    var params = {};
+    if(input.indexOf('?') !== -1)
+    {
+      input.substr(input.indexOf('?') + 1).split('&').map(function(x)
+      {
+        return x.split('=', 2);
+      }).forEach(function(fragment)
+      {
+        params[fragment[0]] = fragment[1] || true;
+      });
+      input = input.substr(0, input.indexOf('?'));
+    }
+    context.page = input;
+    context.params = params;
+    (context.pages[input] || context.pages['404'])(context);
+  };
+  
+  context.page = context.page || '';
+  context.params = context.params || '';
+
+  window.onhashchange = context.Reload;
+  context.Reload();
+};
