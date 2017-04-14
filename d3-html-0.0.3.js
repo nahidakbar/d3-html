@@ -505,10 +505,13 @@ d3.HashStateRouter = function(context)
     {
       if (!value)
       {
-        value = undefined;
+        delete context.params[param];
       }
-      context.params[param] = value;
-      history.pushState({}, document.title, context.link(context.params));
+      else
+      {
+        context.params[param] = value;
+      }
+      history.pushState({}, document.title, context.Link(context.params));
     }
     return context.params[param] || '';
   };
