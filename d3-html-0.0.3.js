@@ -276,7 +276,18 @@ selection.prototype.Options = function (options, selected)
 {
   selection.prototype[ToD3HtmlName('on-' + type)] = function (value, capture)
   {
-    return this.on(type, value, capture);
+    if (arguments.length < 1)
+    {
+      return this.on(type);
+    }
+    else if (arguments.length < 2)
+    {
+      return this.on(type, value);
+    }
+    else
+    {
+      return this.on(type, value, capture);
+    }
   };
 });
 
@@ -288,7 +299,6 @@ selection.prototype.Options = function (options, selected)
   'alt',
   'autocomplete',
   'autofocus',
-  'checked',
   'class',
   'cols',
   'colspan',
@@ -308,12 +318,36 @@ selection.prototype.Options = function (options, selected)
   'selected',
   'tabindex',
   'title',
+].forEach(function (type)
+{
+  selection.prototype[ToD3HtmlName(type)] = function(value)
+  {
+    if (arguments.length < 1)
+    {
+      return this.attr(type);
+    }
+    else
+    {
+      return this.attr(type, value);
+    }
+  };
+});
+
+[
+  'checked',
   'value'
 ].forEach(function (type)
 {
   selection.prototype[ToD3HtmlName(type)] = function(value)
   {
-    return this.attr(type, value);
+    if (arguments.length < 1)
+    {
+      return this.property(type);
+    }
+    else
+    {
+      return this.property(type, value);
+    }
   };
 });
 
@@ -472,7 +506,14 @@ selection.prototype.Options = function (options, selected)
 {
   selection.prototype[ToD3HtmlName(type)] = function (value)
   {
-    return this.style(type, value);
+    if (arguments.length < 1)
+    {
+      return this.style(type);
+    }
+    else
+    {
+      return this.style(type, value);
+    }
   };
 });
 
