@@ -508,7 +508,7 @@ d3.HashStateRouter = function(context)
         value = undefined;
       }
       context.params[param] = value;
-      history.pushState({}, document.title, context.link(context.page, context.params));
+      history.pushState({}, document.title, context.link(context.params));
     }
     return context.params[param] || '';
   };
@@ -521,24 +521,24 @@ d3.HashStateRouter = function(context)
       params[field] = context.params[field];
     }
     params[param] = value;
-    return context.Link(context.page, params)
+    return context.Link(params)
   };
   
-  context.Link = function(page, params)
+  context.Link = function(params)
   {
-    var output = '?';
+    var output = '#';
     for (var param in params)
     {
-      output += param + '=' + params[page] + '&';
+      output += param + '=' + params[param] + '&';
     }
     output = output.replace(/[?&]$/, '');
-    output += '#' + page;
-    return output.replace(/[#]$/, '');
+    return output;
   };
 
   context.Reload = function () {
-    var page = (window.location.hash || "#").substr(1);
-    var params = {};
+    var params = {
+      page: ''
+    };
     if(window.location.search)
     {
       window.location.search.substr(1).split('&').map(function(x)
@@ -548,15 +548,27 @@ d3.HashStateRouter = function(context)
       {
         params[fragment[0]] = fragment[1] || true;
       });
+      window.location.hash = context.Link(params);
+      window.location.search = '';
+      return;
     }
-    context.page = page;
+    else if(window.location.hash)
+    {
+      window.location.hash.substr(1).split('&').map(function(x)
+      {
+        return x.split('=', 2);
+      }).forEach(function(fragment)
+      {
+        params[fragment[0]] = fragment[1] || true;
+      });
+    }
     context.params = params;
-    (context.pages[page] || context.pages['404'])(context);
+    (context.pages[params.page] || context.pages['404'])(context);
   };
   
-  context.page = context.page || '';
-  context.params = context.params || '';
+  context.params = context.params || {};
 
   window.onhashchange = context.Reload;
+  
   context.Reload();
 };
