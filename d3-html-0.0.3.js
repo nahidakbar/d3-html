@@ -336,7 +336,8 @@ selection.prototype.Options = function (options, selected)
 
 [
   'checked',
-  'value'
+  'value',
+  'validity',
 ].forEach(function (type)
 {
   selection.prototype[ToD3HtmlName(type)] = function(value)
@@ -351,6 +352,7 @@ selection.prototype.Options = function (options, selected)
     }
   };
 });
+
 
 // style https://www.w3schools.com/cssref/
 [
