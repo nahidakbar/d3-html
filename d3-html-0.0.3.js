@@ -312,6 +312,7 @@ selection.prototype.Options = function (options, selected)
   'media',
   'method',
   'name',
+  'pattern',
   'placeholder',
   'rowspan',
   'src',
