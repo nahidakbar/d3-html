@@ -20,7 +20,7 @@ function id(i) {
 }
 
 function ToD3HtmlName(name) {
-  return name.toLowerCase().split('-').map(function(fragment)
+  return name.split('-').map(function(fragment)
   {
     return fragment.substr(0, 1).toUpperCase() + fragment.substr(1);
   }).join('');
@@ -302,6 +302,7 @@ selection.prototype.Options = function (options, selected)
   'class',
   'cols',
   'colspan',
+  'contentEditable',
   'disabled',
   'download',
   'draggable',
