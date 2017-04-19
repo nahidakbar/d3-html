@@ -337,8 +337,9 @@ selection.prototype.Options = function (options, selected)
 
 [
   'checked',
-  'value',
+  'parentNode',
   'validity',
+  'value',
 ].forEach(function (type)
 {
   selection.prototype[ToD3HtmlName(type)] = function(value)
@@ -542,7 +543,7 @@ selection.prototype.Children = function(arrayData, childElementTagName, updateCa
 }
 
 
-d3.HashStateRouter = function(context)
+d3.HashStateRouter = function(context, dontRun)
 {
   context.State = function(param, value)
   {
@@ -582,41 +583,54 @@ d3.HashStateRouter = function(context)
     output = output.replace(/[?&]$/, '');
     return output;
   };
-
-  context.Reload = function () {
+  
+  context.HashParams = function(input)
+  {
     var params = {
       page: ''
     };
-    if(window.location.search)
+    input.substr(1).split('&').map(function(x)
     {
-      window.location.search.substr(1).split('&').map(function(x)
-      {
-        return x.split('=', 2);
-      }).forEach(function(fragment)
-      {
-        params[fragment[0]] = fragment[1] || true;
-      });
-      window.location.hash = context.Link(params);
-      window.location.search = '';
-      return;
-    }
-    else if(window.location.hash)
+      return x.split('=', 2);
+    }).forEach(function(fragment)
     {
-      window.location.hash.substr(1).split('&').map(function(x)
-      {
-        return x.split('=', 2);
-      }).forEach(function(fragment)
-      {
-        params[fragment[0]] = fragment[1] || true;
-      });
-    }
-    context.params = params;
-    (context.pages[params.page] || context.pages['404'])(context);
+      params[fragment[0]] = fragment[1] || true;
+    });
+    return params;
   };
   
-  context.params = context.params || {};
-
-  window.onhashchange = context.Reload;
+  context.SearchParams = function(input)
+  {
+    input.substr(1).split('&').map(function(x)
+    {
+      return x.split('=', 2);
+    }).forEach(function(fragment)
+    {
+      params[fragment[0]] = fragment[1] || true;
+    });
+  };
   
-  context.Reload();
+  if (!dontRun)
+  {
+    context.Reload = function () {
+      if(window.location.search)
+      {
+        window.location.hash = context.Link(context.SearchParams(window.location.search));
+        window.location.search = '';
+        return;
+      }
+      else if(window.location.hash)
+      {
+        context.params = context.HashParams(window.location.hash);
+      }
+      (context.pages[context.params.page] || context.pages['404'])(context);
+    };
+
+    context.params = context.params || {};
+
+    window.onhashchange = context.Reload;
+
+    context.Reload();
+  }
+  return context;
 };
