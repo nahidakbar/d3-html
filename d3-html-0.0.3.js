@@ -578,7 +578,10 @@ d3.HashStateRouter = function(context, dontRun)
     var output = '#';
     for (var param in params)
     {
-      output += param + '=' + params[param] + '&';
+      if (param && params[param] !== undefined && params[param] !== '')
+      {
+        output += param + '=' + params[param] + '&';
+      }
     }
     output = output.replace(/[?&]$/, '');
     return output;
