@@ -632,7 +632,7 @@ d3.HashStateRouter = function(context, dontRun)
         window.location.search = '';
         return;
       }
-      else if(window.location.hash)
+      else
       {
         context.params = context.HashParams(window.location.hash);
       }
@@ -641,7 +641,10 @@ d3.HashStateRouter = function(context, dontRun)
 
     context.params = context.params || {};
 
-    window.onhashchange = context.Reload;
+    window.onhashchange = function()
+    {
+      context.Reload();
+    };
 
     context.Reload();
   }
