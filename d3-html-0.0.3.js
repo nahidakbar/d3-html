@@ -569,7 +569,17 @@ d3.HashStateRouter = function(context, dontRun)
     {
       params[field] = context.params[field];
     }
-    params[param] = value;
+    if (typeof param !== 'string')
+    {
+      for (var field in param)
+      {
+        params[field] = param[field];
+      }
+    }
+    else
+    {
+      params[param] = value;
+    }
     return context.Link(params)
   };
   
@@ -626,7 +636,7 @@ d3.HashStateRouter = function(context, dontRun)
       {
         context.params = context.HashParams(window.location.hash);
       }
-      (context.pages[context.params.page] || context.pages['404'])(context);
+      (context.pages[context.params.page || ''] || context.pages['404'])(context);
     };
 
     context.params = context.params || {};
