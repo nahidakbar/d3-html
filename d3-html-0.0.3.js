@@ -118,6 +118,7 @@ function ToD3HtmlName(name) {
   'sub',
   'summary',
   'sup',
+  'svg',
   'table',
   'tbody',
   'td',
@@ -167,7 +168,7 @@ function ToD3HtmlName(name) {
   'week'
 ].forEach(function (type)
 {
-  selection.prototype[ToD3HtmlName(type)] = function (contents)
+  selection.prototype[ToD3HtmlName(type)] = selection.prototype[ToD3HtmlName("input-" + type)] = function (contents)
   {
     return this.append('input')
       .attr('type', type)
@@ -307,9 +308,11 @@ selection.prototype.Options = function (options, selected)
   'download',
   'draggable',
   'dropzone',
+  'enctype',
   'for',
   'formaction',
   'href',
+  'id',
   'media',
   'method',
   'name',
@@ -319,6 +322,7 @@ selection.prototype.Options = function (options, selected)
   'src',
   'selected',
   'tabindex',
+  'target',
   'title',
 ].forEach(function (type)
 {
@@ -404,6 +408,7 @@ selection.prototype.Options = function (options, selected)
   'bottom',
   'clear',
   'clip',
+  'color',
   'display',
   'float',
   'height',
@@ -582,7 +587,7 @@ d3.HashStateRouter = function(context, dontRun)
     }
     return context.Link(params)
   };
-  
+
   context.Link = function(params)
   {
     var output = '#';
@@ -596,7 +601,7 @@ d3.HashStateRouter = function(context, dontRun)
     output = output.replace(/[?&]$/, '');
     return output;
   };
-  
+
   context.HashParams = function(input)
   {
     var params = {
@@ -611,7 +616,7 @@ d3.HashStateRouter = function(context, dontRun)
     });
     return params;
   };
-  
+
   context.SearchParams = function(input)
   {
     input.substr(1).split('&').map(function(x)
@@ -622,25 +627,24 @@ d3.HashStateRouter = function(context, dontRun)
       params[fragment[0]] = fragment[1] || true;
     });
   };
-  
+
+  context.Reload = function () {
+    if(window.location.search)
+    {
+      window.location.hash = context.Link(context.SearchParams(window.location.search));
+      window.location.search = '';
+      return;
+    }
+    else
+    {
+      context.params = context.HashParams(window.location.hash);
+    }
+    (context.pages[context.params.page || ''] || context.pages['404'])(context);
+  };
+
+  context.params = context.params || {};
   if (!dontRun)
   {
-    context.Reload = function () {
-      if(window.location.search)
-      {
-        window.location.hash = context.Link(context.SearchParams(window.location.search));
-        window.location.search = '';
-        return;
-      }
-      else
-      {
-        context.params = context.HashParams(window.location.hash);
-      }
-      (context.pages[context.params.page || ''] || context.pages['404'])(context);
-    };
-
-    context.params = context.params || {};
-
     window.onhashchange = function()
     {
       context.Reload();
