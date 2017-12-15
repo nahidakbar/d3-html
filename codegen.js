@@ -34,7 +34,8 @@ fs.writeFileSync('src/selection/clear.js', `
 /**
  * selection.clear() empties selected container
  */
-export default function() {
+export default function ()
+{
   return this.text('');
 }
 `);
@@ -604,12 +605,15 @@ fs.writeFileSync(`src/selection/Children.js`,
  * @param {string} [updateCallback=''] option content html
  * @return created element
  */
-export default function(arrayData, childElementTagName, updateCallback)
+export default function (arrayData, childElementTagName, updateCallback)
 {
   var parent = this;
   // remove stray elements
   parent.selectAll(childNodesSelector)
-    .filter(function() { return this.tagName !== childElementTagName; })
+    .filter(function()
+    {
+      return this.tagName !== childElementTagName;
+    })
     .remove();
   // synchronise intended elements
   var rows = parent.selectAll(childNodesSelector)
@@ -630,23 +634,28 @@ fs.writeFileSync(`src/selection/Options.js`,
  * @param {string} [selected=''] option content html
  * @return created element
  */
-export default function (options, selected) {
+export default function (options, selected)
+{
   if (Array.isArray(options))
   {
-    return this.Children(options, 'option', function(elem) {
-      elem.html(id).attr('selected', function(i) {
+    return this.Children(options, 'option', function(elem)
+    {
+      elem.html(id).attr('selected', function(i)
+      {
          return (i === selected? 'selected' : null);
       });
     });
   }
   else
   {
-    return this.Children(Object.keys(options), 'option', function(elem) {
+    return this.Children(Object.keys(options), 'option', function(elem)
+    {
       elem.html(function(i) { return options[i] })
         .attr('value', id)
-        .attr('selected', function(i) {
-         return ((i === selected || options[i] === selected)? 'selected' : null);
-      });
+        .attr('selected', function(i)
+        {
+          return ((i === selected || options[i] === selected)? 'selected' : null);
+        });
     });
   }
 }
@@ -659,9 +668,9 @@ fs.writeFileSync(`src/selection/HashStateRouter.js`,
  * @param {string} [dontRun=''] option content html
  * @return created element
  */
-export default function(context, dontRun)
+export default function (context, dontRun)
 {
-  context.State = function(param, value)
+  context.State = function (param, value)
   {
     if (arguments.length > 1)
     {
@@ -678,7 +687,7 @@ export default function(context, dontRun)
     return context.params[param] || '';
   };
 
-  context.StateChangeLink = function(param, value)
+  context.StateChangeLink = function (param, value)
   {
     var params = {};
     for (var field in context.params)
@@ -699,7 +708,7 @@ export default function(context, dontRun)
     return context.Link(params)
   };
 
-  context.Link = function(params)
+  context.Link = function (params)
   {
     var output = '#';
     for (var param in params)
@@ -713,7 +722,7 @@ export default function(context, dontRun)
     return output;
   };
 
-  context.HashParams = function(input)
+  context.HashParams = function (input)
   {
     var params = {
       page: ''
@@ -728,7 +737,7 @@ export default function(context, dontRun)
     return params;
   };
 
-  context.SearchParams = function(input)
+  context.SearchParams = function (input)
   {
     input.substr(1).split('&').map(function(x)
     {
@@ -739,7 +748,8 @@ export default function(context, dontRun)
     });
   };
 
-  context.Reload = function () {
+  context.Reload = function ()
+  {
     if(window.location.search)
     {
       window.location.hash = context.Link(context.SearchParams(window.location.search));

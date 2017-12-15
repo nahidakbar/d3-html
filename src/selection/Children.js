@@ -5,12 +5,15 @@
  * @param {string} [updateCallback=''] option content html
  * @return created element
  */
-export default function(arrayData, childElementTagName, updateCallback)
+export default function (arrayData, childElementTagName, updateCallback)
 {
   var parent = this;
   // remove stray elements
   parent.selectAll(childNodesSelector)
-    .filter(function() { return this.tagName !== childElementTagName; })
+    .filter(function()
+    {
+      return this.tagName !== childElementTagName;
+    })
     .remove();
   // synchronise intended elements
   var rows = parent.selectAll(childNodesSelector)

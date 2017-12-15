@@ -4,9 +4,9 @@
  * @param {string} [dontRun=''] option content html
  * @return created element
  */
-export default function(context, dontRun)
+export default function (context, dontRun)
 {
-  context.State = function(param, value)
+  context.State = function (param, value)
   {
     if (arguments.length > 1)
     {
@@ -23,7 +23,7 @@ export default function(context, dontRun)
     return context.params[param] || '';
   };
 
-  context.StateChangeLink = function(param, value)
+  context.StateChangeLink = function (param, value)
   {
     var params = {};
     for (var field in context.params)
@@ -44,7 +44,7 @@ export default function(context, dontRun)
     return context.Link(params)
   };
 
-  context.Link = function(params)
+  context.Link = function (params)
   {
     var output = '#';
     for (var param in params)
@@ -58,7 +58,7 @@ export default function(context, dontRun)
     return output;
   };
 
-  context.HashParams = function(input)
+  context.HashParams = function (input)
   {
     var params = {
       page: ''
@@ -73,7 +73,7 @@ export default function(context, dontRun)
     return params;
   };
 
-  context.SearchParams = function(input)
+  context.SearchParams = function (input)
   {
     input.substr(1).split('&').map(function(x)
     {
@@ -84,7 +84,8 @@ export default function(context, dontRun)
     });
   };
 
-  context.Reload = function () {
+  context.Reload = function ()
+  {
     if(window.location.search)
     {
       window.location.hash = context.Link(context.SearchParams(window.location.search));
