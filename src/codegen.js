@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 fs.writeFileSync('lib/selection/clear.js', `/**
- * selection.clear() empties selected container
+ * selection.clear() clears selection content
  */
 export default function ()
 {
@@ -9,15 +9,11 @@ export default function ()
 }
 `);
 
-function ToD3HtmlName(name)
-{
-  return name.split('-')
-    .map(function (fragment)
-    {
-      return fragment.substr(0, 1)
-        .toUpperCase() + fragment.substr(1);
-    })
-    .join('');
+function ToD3HtmlName(name) {
+  return name.split('-').map(function(fragment)
+  {
+    return fragment.substr(0, 1).toUpperCase() + fragment.substr(1);
+  }).join('');
 }
 
 const TAGS = [
@@ -133,14 +129,14 @@ for (const tag of TAGS)
 {
   const name = ToD3HtmlName(tag);
   fs.writeFileSync(`lib/selection/${name}.js`,
-    `/**
+`/**
  * selection.${name}() creates &lt;${tag}&gt; element
  * @param {string} [contents=''] option content html
  * @return created element
  */
 export default function (contents)
 {
-  return this.append(type)
+  return this.append('${tag}')
     .html(contents || '');
 }
 `);
@@ -176,7 +172,7 @@ for (const tag of INPUT_TYPE)
   for (const name of [ToD3HtmlName(tag), ToD3HtmlName("input-" + tag)])
   {
     fs.writeFileSync(`lib/selection/${name}.js`,
-      `/**
+`/**
  * selection.${name}() creates &lt;input&gt; element of type ${tag}
  * @param {string} [contents=''] option content html
  * @return created element
@@ -184,7 +180,7 @@ for (const tag of INPUT_TYPE)
 export default function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', '${tag}')
     .html(contents || '');
 }
 `);
@@ -274,30 +270,31 @@ for (const tag of EVENTS)
   for (const name of [ToD3HtmlName("on-" + tag)])
   {
     fs.writeFileSync(`lib/selection/${name}.js`,
-      `/**
- * selection.${name}() creates &lt;input&gt; element of type ${tag}
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+`/**
+ * selection.${name}() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-export default function (value, capture)
+export default function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('${tag}');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('${tag}', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('${tag}', callback, capture);
   }
 }
 `);
   }
 }
+
 
 
 // common attributes https://www.w3schools.com/tags/ref_attributes.asp
@@ -339,10 +336,10 @@ for (const tag of ATTRIBUTES)
   for (const name of [ToD3HtmlName(tag)])
   {
     fs.writeFileSync(`lib/selection/${name}.js`,
-      `/**
- * selection.${name}() creates &lt;input&gt; element of type ${tag}
- * @param {string} [value=''] option content html
- * @return created element
+`/**
+ * selection.${name}() get or change ${tag} attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 export default function (value)
 {
@@ -371,19 +368,19 @@ for (const tag of PROPERTIES)
   for (const name of [ToD3HtmlName(tag)])
   {
     fs.writeFileSync(`lib/selection/${name}.js`, `/**
- * selection.${name}() creates &lt;input&gt; element of type ${tag}
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.${name}() get or change ${tag} property value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 export default function (value)
 {
   if (arguments.length < 1)
   {
-    return this.property(type);
+    return this.property('${tag}');
   }
   else
   {
-    return this.property(type, value);
+    return this.property('${tag}', value);
   }
 }
 `);
@@ -549,20 +546,20 @@ for (const tag of STYLES)
   for (const name of [ToD3HtmlName(tag)])
   {
     fs.writeFileSync(`lib/selection/${name}.js`,
-      `/**
- * selection.${name}() creates &lt;input&gt; element of type ${tag}
- * @param {string} [value=''] option content html
- * @return created element
+`/**
+ * selection.${name}() get or change ${tag} style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 export default function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('${tag}');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('${tag}', value);
   }
 }
 `);
@@ -570,12 +567,15 @@ export default function (value)
 }
 
 fs.writeFileSync(`lib/selection/Children.js`,
-  `/**
+`/**
  * selection.Children() syncs children of an element to array of data elements
- * @param {string} [arrayData=''] option content html
- * @param {string} [childElementTagName=''] option content html
- * @param {string} [updateCallback=''] option content html
- * @return created element
+ *
+ * Basically, is a wrapper for d3-selection enter and exit pattern.
+ *
+ * @param {string} [arrayData=''] array of data
+ * @param {string} [childElementTagName=''] top level tag name
+ * @param {string} [updateCallback=''] callback called to build or update child element
+ * @return selected
  */
 export default function (arrayData, childElementTagName, updateCallback)
 {
@@ -605,11 +605,11 @@ function childNodesSelector ()
 `);
 
 fs.writeFileSync(`lib/selection/Options.js`,
-  `/**
- * selection.Options() creates a list of &lt;option&gt; elements
- * @param {string} [options=''] option content html
- * @param {string} [selected=''] option content html
- * @return created element
+`/**
+ * selection.Options() creates a list of child &lt;option&gt; elements
+ * @param {string} [options=''] array of strngs or key value object containing labels
+ * @param {string} [selected=''] selected element
+ * @return selected
  */
 export default function (options, selected)
 {
@@ -648,11 +648,14 @@ function id (i)
 `);
 
 fs.writeFileSync(`lib/selection/HashStateRouter.js`,
-  `/**
- * selection.HashStateRouter()
- * @param {string} [context=''] option content html
- * @param {string} [dontRun=''] option content html
- * @return created element
+`/**
+ * selection.HashStateRouter() Simple router that relies on window hash value.
+ *
+ * TODO: Document in more detail
+ *
+ * @param {object} [context={}] configuration
+ * @param {boolean} [dontRun=false] dont start
+ * @return updated context with additional methods
  */
 export default function (context, dontRun)
 {

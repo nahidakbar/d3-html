@@ -11,7 +11,7 @@
  */
 var A = function (contents)
 {
-  return this.append(type)
+  return this.append('a')
     .html(contents || '');
 };
 
@@ -22,14 +22,14 @@ var A = function (contents)
  */
 var Abbr = function (contents)
 {
-  return this.append(type)
+  return this.append('abbr')
     .html(contents || '');
 };
 
 /**
- * selection.Accept() creates &lt;input&gt; element of type accept
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Accept() get or change accept attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Accept = function (value)
 {
@@ -44,9 +44,9 @@ var Accept = function (value)
 };
 
 /**
- * selection.Accesskey() creates &lt;input&gt; element of type accesskey
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Accesskey() get or change accesskey attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Accesskey = function (value)
 {
@@ -61,9 +61,9 @@ var Accesskey = function (value)
 };
 
 /**
- * selection.Action() creates &lt;input&gt; element of type action
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Action() get or change action attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Action = function (value)
 {
@@ -84,65 +84,65 @@ var Action = function (value)
  */
 var Address = function (contents)
 {
-  return this.append(type)
+  return this.append('address')
     .html(contents || '');
 };
 
 /**
- * selection.AlignContent() creates &lt;input&gt; element of type align-content
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.AlignContent() get or change align-content style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var AlignContent = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('align-content');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('align-content', value);
   }
 };
 
 /**
- * selection.AlignItems() creates &lt;input&gt; element of type align-items
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.AlignItems() get or change align-items style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var AlignItems = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('align-items');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('align-items', value);
   }
 };
 
 /**
- * selection.AlignSelf() creates &lt;input&gt; element of type align-self
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.AlignSelf() get or change align-self style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var AlignSelf = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('align-self');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('align-self', value);
   }
 };
 
 /**
- * selection.Alt() creates &lt;input&gt; element of type alt
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Alt() get or change alt attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Alt = function (value)
 {
@@ -163,7 +163,7 @@ var Alt = function (value)
  */
 var Area = function (contents)
 {
-  return this.append(type)
+  return this.append('area')
     .html(contents || '');
 };
 
@@ -174,7 +174,7 @@ var Area = function (contents)
  */
 var Article = function (contents)
 {
-  return this.append(type)
+  return this.append('article')
     .html(contents || '');
 };
 
@@ -185,7 +185,7 @@ var Article = function (contents)
  */
 var Aside = function (contents)
 {
-  return this.append(type)
+  return this.append('aside')
     .html(contents || '');
 };
 
@@ -196,14 +196,14 @@ var Aside = function (contents)
  */
 var Audio = function (contents)
 {
-  return this.append(type)
+  return this.append('audio')
     .html(contents || '');
 };
 
 /**
- * selection.Autocomplete() creates &lt;input&gt; element of type autocomplete
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Autocomplete() get or change autocomplete attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Autocomplete = function (value)
 {
@@ -218,9 +218,9 @@ var Autocomplete = function (value)
 };
 
 /**
- * selection.Autofocus() creates &lt;input&gt; element of type autofocus
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Autofocus() get or change autofocus attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Autofocus = function (value)
 {
@@ -241,177 +241,177 @@ var Autofocus = function (value)
  */
 var B = function (contents)
 {
-  return this.append(type)
+  return this.append('b')
     .html(contents || '');
 };
 
 /**
- * selection.Background() creates &lt;input&gt; element of type background
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Background() get or change background style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Background = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('background');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('background', value);
   }
 };
 
 /**
- * selection.BackgroundAttachment() creates &lt;input&gt; element of type background-attachment
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BackgroundAttachment() get or change background-attachment style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BackgroundAttachment = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('background-attachment');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('background-attachment', value);
   }
 };
 
 /**
- * selection.BackgroundBlendMode() creates &lt;input&gt; element of type background-blend-mode
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BackgroundBlendMode() get or change background-blend-mode style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BackgroundBlendMode = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('background-blend-mode');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('background-blend-mode', value);
   }
 };
 
 /**
- * selection.BackgroundClip() creates &lt;input&gt; element of type background-clip
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BackgroundClip() get or change background-clip style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BackgroundClip = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('background-clip');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('background-clip', value);
   }
 };
 
 /**
- * selection.BackgroundColor() creates &lt;input&gt; element of type background-color
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BackgroundColor() get or change background-color style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BackgroundColor = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('background-color');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('background-color', value);
   }
 };
 
 /**
- * selection.BackgroundImage() creates &lt;input&gt; element of type background-image
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BackgroundImage() get or change background-image style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BackgroundImage = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('background-image');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('background-image', value);
   }
 };
 
 /**
- * selection.BackgroundOrigin() creates &lt;input&gt; element of type background-origin
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BackgroundOrigin() get or change background-origin style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BackgroundOrigin = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('background-origin');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('background-origin', value);
   }
 };
 
 /**
- * selection.BackgroundPosition() creates &lt;input&gt; element of type background-position
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BackgroundPosition() get or change background-position style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BackgroundPosition = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('background-position');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('background-position', value);
   }
 };
 
 /**
- * selection.BackgroundRepeat() creates &lt;input&gt; element of type background-repeat
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BackgroundRepeat() get or change background-repeat style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BackgroundRepeat = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('background-repeat');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('background-repeat', value);
   }
 };
 
 /**
- * selection.BackgroundSize() creates &lt;input&gt; element of type background-size
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BackgroundSize() get or change background-size style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BackgroundSize = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('background-size');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('background-size', value);
   }
 };
 
@@ -422,7 +422,7 @@ var BackgroundSize = function (value)
  */
 var Base = function (contents)
 {
-  return this.append(type)
+  return this.append('base')
     .html(contents || '');
 };
 
@@ -433,7 +433,7 @@ var Base = function (contents)
  */
 var Bdi = function (contents)
 {
-  return this.append(type)
+  return this.append('bdi')
     .html(contents || '');
 };
 
@@ -444,7 +444,7 @@ var Bdi = function (contents)
  */
 var Bdo = function (contents)
 {
-  return this.append(type)
+  return this.append('bdo')
     .html(contents || '');
 };
 
@@ -455,636 +455,636 @@ var Bdo = function (contents)
  */
 var Blockquote = function (contents)
 {
-  return this.append(type)
+  return this.append('blockquote')
     .html(contents || '');
 };
 
 /**
- * selection.Border() creates &lt;input&gt; element of type border
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Border() get or change border style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Border = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border', value);
   }
 };
 
 /**
- * selection.BorderBottom() creates &lt;input&gt; element of type border-bottom
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderBottom() get or change border-bottom style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderBottom = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-bottom');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-bottom', value);
   }
 };
 
 /**
- * selection.BorderBottomColor() creates &lt;input&gt; element of type border-bottom-color
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderBottomColor() get or change border-bottom-color style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderBottomColor = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-bottom-color');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-bottom-color', value);
   }
 };
 
 /**
- * selection.BorderBottomLeftRadius() creates &lt;input&gt; element of type border-bottom-left-radius
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderBottomLeftRadius() get or change border-bottom-left-radius style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderBottomLeftRadius = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-bottom-left-radius');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-bottom-left-radius', value);
   }
 };
 
 /**
- * selection.BorderBottomRightRadius() creates &lt;input&gt; element of type border-bottom-right-radius
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderBottomRightRadius() get or change border-bottom-right-radius style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderBottomRightRadius = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-bottom-right-radius');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-bottom-right-radius', value);
   }
 };
 
 /**
- * selection.BorderBottomStyle() creates &lt;input&gt; element of type border-bottom-style
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderBottomStyle() get or change border-bottom-style style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderBottomStyle = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-bottom-style');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-bottom-style', value);
   }
 };
 
 /**
- * selection.BorderBottomWidth() creates &lt;input&gt; element of type border-bottom-width
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderBottomWidth() get or change border-bottom-width style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderBottomWidth = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-bottom-width');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-bottom-width', value);
   }
 };
 
 /**
- * selection.BorderCollapse() creates &lt;input&gt; element of type border-collapse
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderCollapse() get or change border-collapse style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderCollapse = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-collapse');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-collapse', value);
   }
 };
 
 /**
- * selection.BorderColor() creates &lt;input&gt; element of type border-color
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderColor() get or change border-color style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderColor = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-color');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-color', value);
   }
 };
 
 /**
- * selection.BorderImage() creates &lt;input&gt; element of type border-image
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderImage() get or change border-image style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderImage = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-image');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-image', value);
   }
 };
 
 /**
- * selection.BorderImageOutset() creates &lt;input&gt; element of type border-image-outset
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderImageOutset() get or change border-image-outset style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderImageOutset = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-image-outset');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-image-outset', value);
   }
 };
 
 /**
- * selection.BorderImageRepeat() creates &lt;input&gt; element of type border-image-repeat
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderImageRepeat() get or change border-image-repeat style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderImageRepeat = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-image-repeat');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-image-repeat', value);
   }
 };
 
 /**
- * selection.BorderImageSlice() creates &lt;input&gt; element of type border-image-slice
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderImageSlice() get or change border-image-slice style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderImageSlice = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-image-slice');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-image-slice', value);
   }
 };
 
 /**
- * selection.BorderImageSource() creates &lt;input&gt; element of type border-image-source
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderImageSource() get or change border-image-source style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderImageSource = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-image-source');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-image-source', value);
   }
 };
 
 /**
- * selection.BorderImageWidth() creates &lt;input&gt; element of type border-image-width
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderImageWidth() get or change border-image-width style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderImageWidth = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-image-width');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-image-width', value);
   }
 };
 
 /**
- * selection.BorderLeft() creates &lt;input&gt; element of type border-left
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderLeft() get or change border-left style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderLeft = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-left');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-left', value);
   }
 };
 
 /**
- * selection.BorderLeftColor() creates &lt;input&gt; element of type border-left-color
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderLeftColor() get or change border-left-color style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderLeftColor = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-left-color');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-left-color', value);
   }
 };
 
 /**
- * selection.BorderLeftStyle() creates &lt;input&gt; element of type border-left-style
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderLeftStyle() get or change border-left-style style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderLeftStyle = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-left-style');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-left-style', value);
   }
 };
 
 /**
- * selection.BorderLeftWidth() creates &lt;input&gt; element of type border-left-width
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderLeftWidth() get or change border-left-width style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderLeftWidth = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-left-width');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-left-width', value);
   }
 };
 
 /**
- * selection.BorderRadius() creates &lt;input&gt; element of type border-radius
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderRadius() get or change border-radius style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderRadius = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-radius');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-radius', value);
   }
 };
 
 /**
- * selection.BorderRight() creates &lt;input&gt; element of type border-right
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderRight() get or change border-right style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderRight = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-right');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-right', value);
   }
 };
 
 /**
- * selection.BorderRightColor() creates &lt;input&gt; element of type border-right-color
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderRightColor() get or change border-right-color style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderRightColor = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-right-color');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-right-color', value);
   }
 };
 
 /**
- * selection.BorderRightStyle() creates &lt;input&gt; element of type border-right-style
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderRightStyle() get or change border-right-style style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderRightStyle = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-right-style');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-right-style', value);
   }
 };
 
 /**
- * selection.BorderRightWidth() creates &lt;input&gt; element of type border-right-width
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderRightWidth() get or change border-right-width style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderRightWidth = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-right-width');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-right-width', value);
   }
 };
 
 /**
- * selection.BorderSpacing() creates &lt;input&gt; element of type border-spacing
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderSpacing() get or change border-spacing style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderSpacing = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-spacing');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-spacing', value);
   }
 };
 
 /**
- * selection.BorderStyle() creates &lt;input&gt; element of type border-style
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderStyle() get or change border-style style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderStyle = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-style');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-style', value);
   }
 };
 
 /**
- * selection.BorderTop() creates &lt;input&gt; element of type border-top
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderTop() get or change border-top style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderTop = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-top');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-top', value);
   }
 };
 
 /**
- * selection.BorderTopColor() creates &lt;input&gt; element of type border-top-color
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderTopColor() get or change border-top-color style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderTopColor = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-top-color');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-top-color', value);
   }
 };
 
 /**
- * selection.BorderTopLeftRadius() creates &lt;input&gt; element of type border-top-left-radius
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderTopLeftRadius() get or change border-top-left-radius style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderTopLeftRadius = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-top-left-radius');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-top-left-radius', value);
   }
 };
 
 /**
- * selection.BorderTopRightRadius() creates &lt;input&gt; element of type border-top-right-radius
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderTopRightRadius() get or change border-top-right-radius style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderTopRightRadius = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-top-right-radius');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-top-right-radius', value);
   }
 };
 
 /**
- * selection.BorderTopStyle() creates &lt;input&gt; element of type border-top-style
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderTopStyle() get or change border-top-style style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderTopStyle = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-top-style');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-top-style', value);
   }
 };
 
 /**
- * selection.BorderTopWidth() creates &lt;input&gt; element of type border-top-width
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderTopWidth() get or change border-top-width style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderTopWidth = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-top-width');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-top-width', value);
   }
 };
 
 /**
- * selection.BorderWidth() creates &lt;input&gt; element of type border-width
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BorderWidth() get or change border-width style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BorderWidth = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('border-width');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('border-width', value);
   }
 };
 
 /**
- * selection.Bottom() creates &lt;input&gt; element of type bottom
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Bottom() get or change bottom style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Bottom = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('bottom');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('bottom', value);
   }
 };
 
 /**
- * selection.BoxDecorationBreak() creates &lt;input&gt; element of type box-decoration-break
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BoxDecorationBreak() get or change box-decoration-break style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BoxDecorationBreak = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('box-decoration-break');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('box-decoration-break', value);
   }
 };
 
 /**
- * selection.BoxShadow() creates &lt;input&gt; element of type box-shadow
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BoxShadow() get or change box-shadow style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BoxShadow = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('box-shadow');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('box-shadow', value);
   }
 };
 
 /**
- * selection.BoxSizing() creates &lt;input&gt; element of type box-sizing
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.BoxSizing() get or change box-sizing style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var BoxSizing = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('box-sizing');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('box-sizing', value);
   }
 };
 
@@ -1095,7 +1095,7 @@ var BoxSizing = function (value)
  */
 var Br = function (contents)
 {
-  return this.append(type)
+  return this.append('br')
     .html(contents || '');
 };
 
@@ -1106,7 +1106,7 @@ var Br = function (contents)
  */
 var Button = function (contents)
 {
-  return this.append(type)
+  return this.append('button')
     .html(contents || '');
 };
 
@@ -1117,7 +1117,7 @@ var Button = function (contents)
  */
 var Canvas = function (contents)
 {
-  return this.append(type)
+  return this.append('canvas')
     .html(contents || '');
 };
 
@@ -1128,24 +1128,24 @@ var Canvas = function (contents)
  */
 var Caption = function (contents)
 {
-  return this.append(type)
+  return this.append('caption')
     .html(contents || '');
 };
 
 /**
- * selection.CaptionSide() creates &lt;input&gt; element of type caption-side
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.CaptionSide() get or change caption-side style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var CaptionSide = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('caption-side');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('caption-side', value);
   }
 };
 
@@ -1157,33 +1157,36 @@ var CaptionSide = function (value)
 var Checkbox = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'checkbox')
     .html(contents || '');
 };
 
 /**
- * selection.Checked() creates &lt;input&gt; element of type checked
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Checked() get or change checked property value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Checked = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.property(type);
+    return this.property('checked');
   }
   else
   {
-    return this.property(type, value);
+    return this.property('checked', value);
   }
 };
 
 /**
  * selection.Children() syncs children of an element to array of data elements
- * @param {string} [arrayData=''] option content html
- * @param {string} [childElementTagName=''] option content html
- * @param {string} [updateCallback=''] option content html
- * @return created element
+ *
+ * Basically, is a wrapper for d3-selection enter and exit pattern.
+ *
+ * @param {string} [arrayData=''] array of data
+ * @param {string} [childElementTagName=''] top level tag name
+ * @param {string} [updateCallback=''] callback called to build or update child element
+ * @return selected
  */
 var Children = function (arrayData, childElementTagName, updateCallback)
 {
@@ -1218,14 +1221,14 @@ function childNodesSelector ()
  */
 var Cite = function (contents)
 {
-  return this.append(type)
+  return this.append('cite')
     .html(contents || '');
 };
 
 /**
- * selection.Class() creates &lt;input&gt; element of type class
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Class() get or change class attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Class = function (value)
 {
@@ -1240,36 +1243,36 @@ var Class = function (value)
 };
 
 /**
- * selection.Clear() creates &lt;input&gt; element of type clear
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Clear() get or change clear style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Clear = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('clear');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('clear', value);
   }
 };
 
 /**
- * selection.Clip() creates &lt;input&gt; element of type clip
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Clip() get or change clip style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Clip = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('clip');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('clip', value);
   }
 };
 
@@ -1280,7 +1283,7 @@ var Clip = function (value)
  */
 var Code = function (contents)
 {
-  return this.append(type)
+  return this.append('code')
     .html(contents || '');
 };
 
@@ -1291,7 +1294,7 @@ var Code = function (contents)
  */
 var Col = function (contents)
 {
-  return this.append(type)
+  return this.append('col')
     .html(contents || '');
 };
 
@@ -1302,31 +1305,31 @@ var Col = function (contents)
  */
 var Colgroup = function (contents)
 {
-  return this.append(type)
+  return this.append('colgroup')
     .html(contents || '');
 };
 
 /**
- * selection.Color() creates &lt;input&gt; element of type color
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Color() get or change color style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Color = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('color');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('color', value);
   }
 };
 
 /**
- * selection.Cols() creates &lt;input&gt; element of type cols
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Cols() get or change cols attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Cols = function (value)
 {
@@ -1341,9 +1344,9 @@ var Cols = function (value)
 };
 
 /**
- * selection.Colspan() creates &lt;input&gt; element of type colspan
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Colspan() get or change colspan attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Colspan = function (value)
 {
@@ -1358,26 +1361,26 @@ var Colspan = function (value)
 };
 
 /**
- * selection.Content() creates &lt;input&gt; element of type content
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Content() get or change content style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Content = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('content');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('content', value);
   }
 };
 
 /**
- * selection.ContentEditable() creates &lt;input&gt; element of type contentEditable
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.ContentEditable() get or change contentEditable attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var ContentEditable = function (value)
 {
@@ -1392,19 +1395,19 @@ var ContentEditable = function (value)
 };
 
 /**
- * selection.Cursor() creates &lt;input&gt; element of type cursor
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Cursor() get or change cursor style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Cursor = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('cursor');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('cursor', value);
   }
 };
 
@@ -1415,7 +1418,7 @@ var Cursor = function (value)
  */
 var Data = function (contents)
 {
-  return this.append(type)
+  return this.append('data')
     .html(contents || '');
 };
 
@@ -1426,7 +1429,7 @@ var Data = function (contents)
  */
 var Datalist = function (contents)
 {
-  return this.append(type)
+  return this.append('datalist')
     .html(contents || '');
 };
 
@@ -1438,7 +1441,7 @@ var Datalist = function (contents)
 var Date = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'date')
     .html(contents || '');
 };
 
@@ -1450,7 +1453,7 @@ var Date = function (contents)
 var DatetimeLocal = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'datetime-local')
     .html(contents || '');
 };
 
@@ -1461,7 +1464,7 @@ var DatetimeLocal = function (contents)
  */
 var Dd = function (contents)
 {
-  return this.append(type)
+  return this.append('dd')
     .html(contents || '');
 };
 
@@ -1472,7 +1475,7 @@ var Dd = function (contents)
  */
 var Del = function (contents)
 {
-  return this.append(type)
+  return this.append('del')
     .html(contents || '');
 };
 
@@ -1483,7 +1486,7 @@ var Del = function (contents)
  */
 var Details = function (contents)
 {
-  return this.append(type)
+  return this.append('details')
     .html(contents || '');
 };
 
@@ -1494,14 +1497,14 @@ var Details = function (contents)
  */
 var Dfn = function (contents)
 {
-  return this.append(type)
+  return this.append('dfn')
     .html(contents || '');
 };
 
 /**
- * selection.Disabled() creates &lt;input&gt; element of type disabled
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Disabled() get or change disabled attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Disabled = function (value)
 {
@@ -1516,19 +1519,19 @@ var Disabled = function (value)
 };
 
 /**
- * selection.Display() creates &lt;input&gt; element of type display
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Display() get or change display style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Display = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('display');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('display', value);
   }
 };
 
@@ -1539,7 +1542,7 @@ var Display = function (value)
  */
 var Div = function (contents)
 {
-  return this.append(type)
+  return this.append('div')
     .html(contents || '');
 };
 
@@ -1550,14 +1553,14 @@ var Div = function (contents)
  */
 var Dl = function (contents)
 {
-  return this.append(type)
+  return this.append('dl')
     .html(contents || '');
 };
 
 /**
- * selection.Download() creates &lt;input&gt; element of type download
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Download() get or change download attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Download = function (value)
 {
@@ -1572,9 +1575,9 @@ var Download = function (value)
 };
 
 /**
- * selection.Draggable() creates &lt;input&gt; element of type draggable
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Draggable() get or change draggable attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Draggable = function (value)
 {
@@ -1589,9 +1592,9 @@ var Draggable = function (value)
 };
 
 /**
- * selection.Dropzone() creates &lt;input&gt; element of type dropzone
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Dropzone() get or change dropzone attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Dropzone = function (value)
 {
@@ -1612,7 +1615,7 @@ var Dropzone = function (value)
  */
 var Dt = function (contents)
 {
-  return this.append(type)
+  return this.append('dt')
     .html(contents || '');
 };
 
@@ -1623,7 +1626,7 @@ var Dt = function (contents)
  */
 var Element = function (contents)
 {
-  return this.append(type)
+  return this.append('element')
     .html(contents || '');
 };
 
@@ -1634,7 +1637,7 @@ var Element = function (contents)
  */
 var Em = function (contents)
 {
-  return this.append(type)
+  return this.append('em')
     .html(contents || '');
 };
 
@@ -1646,7 +1649,7 @@ var Em = function (contents)
 var Email = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'email')
     .html(contents || '');
 };
 
@@ -1657,31 +1660,31 @@ var Email = function (contents)
  */
 var Embed = function (contents)
 {
-  return this.append(type)
+  return this.append('embed')
     .html(contents || '');
 };
 
 /**
- * selection.EmptyCells() creates &lt;input&gt; element of type empty-cells
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.EmptyCells() get or change empty-cells style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var EmptyCells = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('empty-cells');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('empty-cells', value);
   }
 };
 
 /**
- * selection.Enctype() creates &lt;input&gt; element of type enctype
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Enctype() get or change enctype attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Enctype = function (value)
 {
@@ -1702,7 +1705,7 @@ var Enctype = function (value)
  */
 var Fieldset = function (contents)
 {
-  return this.append(type)
+  return this.append('fieldset')
     .html(contents || '');
 };
 
@@ -1713,7 +1716,7 @@ var Fieldset = function (contents)
  */
 var Figcaption = function (contents)
 {
-  return this.append(type)
+  return this.append('figcaption')
     .html(contents || '');
 };
 
@@ -1724,7 +1727,7 @@ var Figcaption = function (contents)
  */
 var Figure = function (contents)
 {
-  return this.append(type)
+  return this.append('figure')
     .html(contents || '');
 };
 
@@ -1736,449 +1739,449 @@ var Figure = function (contents)
 var File = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'file')
     .html(contents || '');
 };
 
 /**
- * selection.Flex() creates &lt;input&gt; element of type flex
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Flex() get or change flex style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Flex = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('flex');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('flex', value);
   }
 };
 
 /**
- * selection.FlexBasis() creates &lt;input&gt; element of type flex-basis
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FlexBasis() get or change flex-basis style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FlexBasis = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('flex-basis');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('flex-basis', value);
   }
 };
 
 /**
- * selection.FlexDirection() creates &lt;input&gt; element of type flex-direction
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FlexDirection() get or change flex-direction style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FlexDirection = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('flex-direction');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('flex-direction', value);
   }
 };
 
 /**
- * selection.FlexFlow() creates &lt;input&gt; element of type flex-flow
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FlexFlow() get or change flex-flow style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FlexFlow = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('flex-flow');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('flex-flow', value);
   }
 };
 
 /**
- * selection.FlexGrow() creates &lt;input&gt; element of type flex-grow
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FlexGrow() get or change flex-grow style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FlexGrow = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('flex-grow');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('flex-grow', value);
   }
 };
 
 /**
- * selection.FlexShrink() creates &lt;input&gt; element of type flex-shrink
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FlexShrink() get or change flex-shrink style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FlexShrink = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('flex-shrink');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('flex-shrink', value);
   }
 };
 
 /**
- * selection.FlexWrap() creates &lt;input&gt; element of type flex-wrap
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FlexWrap() get or change flex-wrap style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FlexWrap = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('flex-wrap');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('flex-wrap', value);
   }
 };
 
 /**
- * selection.Float() creates &lt;input&gt; element of type float
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Float() get or change float style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Float = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('float');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('float', value);
   }
 };
 
 /**
- * selection.Font() creates &lt;input&gt; element of type font
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Font() get or change font style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Font = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font', value);
   }
 };
 
 /**
- * selection.FontFamily() creates &lt;input&gt; element of type font-family
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontFamily() get or change font-family style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontFamily = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-family');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-family', value);
   }
 };
 
 /**
- * selection.FontFeatureSettings() creates &lt;input&gt; element of type font-feature-settings
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontFeatureSettings() get or change font-feature-settings style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontFeatureSettings = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-feature-settings');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-feature-settings', value);
   }
 };
 
 /**
- * selection.FontKerning() creates &lt;input&gt; element of type font-kerning
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontKerning() get or change font-kerning style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontKerning = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-kerning');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-kerning', value);
   }
 };
 
 /**
- * selection.FontLanguageOverride() creates &lt;input&gt; element of type font-language-override
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontLanguageOverride() get or change font-language-override style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontLanguageOverride = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-language-override');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-language-override', value);
   }
 };
 
 /**
- * selection.FontSize() creates &lt;input&gt; element of type font-size
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontSize() get or change font-size style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontSize = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-size');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-size', value);
   }
 };
 
 /**
- * selection.FontSizeAdjust() creates &lt;input&gt; element of type font-size-adjust
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontSizeAdjust() get or change font-size-adjust style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontSizeAdjust = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-size-adjust');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-size-adjust', value);
   }
 };
 
 /**
- * selection.FontStretch() creates &lt;input&gt; element of type font-stretch
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontStretch() get or change font-stretch style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontStretch = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-stretch');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-stretch', value);
   }
 };
 
 /**
- * selection.FontStyle() creates &lt;input&gt; element of type font-style
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontStyle() get or change font-style style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontStyle = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-style');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-style', value);
   }
 };
 
 /**
- * selection.FontSynthesis() creates &lt;input&gt; element of type font-synthesis
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontSynthesis() get or change font-synthesis style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontSynthesis = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-synthesis');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-synthesis', value);
   }
 };
 
 /**
- * selection.FontVariant() creates &lt;input&gt; element of type font-variant
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontVariant() get or change font-variant style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontVariant = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-variant');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-variant', value);
   }
 };
 
 /**
- * selection.FontVariantAlternates() creates &lt;input&gt; element of type font-variant-alternates
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontVariantAlternates() get or change font-variant-alternates style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontVariantAlternates = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-variant-alternates');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-variant-alternates', value);
   }
 };
 
 /**
- * selection.FontVariantCaps() creates &lt;input&gt; element of type font-variant-caps
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontVariantCaps() get or change font-variant-caps style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontVariantCaps = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-variant-caps');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-variant-caps', value);
   }
 };
 
 /**
- * selection.FontVariantEastAsian() creates &lt;input&gt; element of type font-variant-east-asian
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontVariantEastAsian() get or change font-variant-east-asian style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontVariantEastAsian = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-variant-east-asian');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-variant-east-asian', value);
   }
 };
 
 /**
- * selection.FontVariantLigatures() creates &lt;input&gt; element of type font-variant-ligatures
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontVariantLigatures() get or change font-variant-ligatures style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontVariantLigatures = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-variant-ligatures');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-variant-ligatures', value);
   }
 };
 
 /**
- * selection.FontVariantNumeric() creates &lt;input&gt; element of type font-variant-numeric
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontVariantNumeric() get or change font-variant-numeric style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontVariantNumeric = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-variant-numeric');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-variant-numeric', value);
   }
 };
 
 /**
- * selection.FontVariantPosition() creates &lt;input&gt; element of type font-variant-position
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontVariantPosition() get or change font-variant-position style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontVariantPosition = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-variant-position');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-variant-position', value);
   }
 };
 
 /**
- * selection.FontWeight() creates &lt;input&gt; element of type font-weight
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.FontWeight() get or change font-weight style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var FontWeight = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('font-weight');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('font-weight', value);
   }
 };
 
@@ -2189,14 +2192,14 @@ var FontWeight = function (value)
  */
 var Footer = function (contents)
 {
-  return this.append(type)
+  return this.append('footer')
     .html(contents || '');
 };
 
 /**
- * selection.For() creates &lt;input&gt; element of type for
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.For() get or change for attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var For = function (value)
 {
@@ -2217,14 +2220,14 @@ var For = function (value)
  */
 var Form = function (contents)
 {
-  return this.append(type)
+  return this.append('form')
     .html(contents || '');
 };
 
 /**
- * selection.Formaction() creates &lt;input&gt; element of type formaction
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Formaction() get or change formaction attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Formaction = function (value)
 {
@@ -2245,7 +2248,7 @@ var Formaction = function (value)
  */
 var H1 = function (contents)
 {
-  return this.append(type)
+  return this.append('h1')
     .html(contents || '');
 };
 
@@ -2256,7 +2259,7 @@ var H1 = function (contents)
  */
 var H2 = function (contents)
 {
-  return this.append(type)
+  return this.append('h2')
     .html(contents || '');
 };
 
@@ -2267,7 +2270,7 @@ var H2 = function (contents)
  */
 var H3 = function (contents)
 {
-  return this.append(type)
+  return this.append('h3')
     .html(contents || '');
 };
 
@@ -2278,7 +2281,7 @@ var H3 = function (contents)
  */
 var H4 = function (contents)
 {
-  return this.append(type)
+  return this.append('h4')
     .html(contents || '');
 };
 
@@ -2289,7 +2292,7 @@ var H4 = function (contents)
  */
 var H5 = function (contents)
 {
-  return this.append(type)
+  return this.append('h5')
     .html(contents || '');
 };
 
@@ -2300,32 +2303,35 @@ var H5 = function (contents)
  */
 var H6 = function (contents)
 {
-  return this.append(type)
+  return this.append('h6')
     .html(contents || '');
 };
 
 /**
- * selection.HangingPunctuation() creates &lt;input&gt; element of type hanging-punctuation
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.HangingPunctuation() get or change hanging-punctuation style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var HangingPunctuation = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('hanging-punctuation');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('hanging-punctuation', value);
   }
 };
 
 /**
- * selection.HashStateRouter()
- * @param {string} [context=''] option content html
- * @param {string} [dontRun=''] option content html
- * @return created element
+ * selection.HashStateRouter() Simple router that relies on window hash value.
+ *
+ * TODO: Document in more detail
+ *
+ * @param {object} [context={}] configuration
+ * @param {boolean} [dontRun=false] dont start
+ * @return updated context with additional methods
  */
 var HashStateRouter = function (context, dontRun)
 {
@@ -2448,24 +2454,24 @@ var HashStateRouter = function (context, dontRun)
  */
 var Header = function (contents)
 {
-  return this.append(type)
+  return this.append('header')
     .html(contents || '');
 };
 
 /**
- * selection.Height() creates &lt;input&gt; element of type height
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Height() get or change height style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Height = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('height');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('height', value);
   }
 };
 
@@ -2477,7 +2483,7 @@ var Height = function (value)
 var Hidden = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'hidden')
     .html(contents || '');
 };
 
@@ -2488,14 +2494,14 @@ var Hidden = function (contents)
  */
 var Hr = function (contents)
 {
-  return this.append(type)
+  return this.append('hr')
     .html(contents || '');
 };
 
 /**
- * selection.Href() creates &lt;input&gt; element of type href
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Href() get or change href attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Href = function (value)
 {
@@ -2510,19 +2516,19 @@ var Href = function (value)
 };
 
 /**
- * selection.Hyphens() creates &lt;input&gt; element of type hyphens
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Hyphens() get or change hyphens style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Hyphens = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('hyphens');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('hyphens', value);
   }
 };
 
@@ -2533,14 +2539,14 @@ var Hyphens = function (value)
  */
 var I = function (contents)
 {
-  return this.append(type)
+  return this.append('i')
     .html(contents || '');
 };
 
 /**
- * selection.Id() creates &lt;input&gt; element of type id
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Id() get or change id attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Id = function (value)
 {
@@ -2561,7 +2567,7 @@ var Id = function (value)
  */
 var Iframe = function (contents)
 {
-  return this.append(type)
+  return this.append('iframe')
     .html(contents || '');
 };
 
@@ -2573,24 +2579,24 @@ var Iframe = function (contents)
 var Image = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'image')
     .html(contents || '');
 };
 
 /**
- * selection.ImeMode() creates &lt;input&gt; element of type ime-mode
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.ImeMode() get or change ime-mode style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var ImeMode = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('ime-mode');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('ime-mode', value);
   }
 };
 
@@ -2601,7 +2607,7 @@ var ImeMode = function (value)
  */
 var Img = function (contents)
 {
-  return this.append(type)
+  return this.append('img')
     .html(contents || '');
 };
 
@@ -2612,7 +2618,7 @@ var Img = function (contents)
  */
 var Input = function (contents)
 {
-  return this.append(type)
+  return this.append('input')
     .html(contents || '');
 };
 
@@ -2624,7 +2630,7 @@ var Input = function (contents)
 var InputCheckbox = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'checkbox')
     .html(contents || '');
 };
 
@@ -2636,7 +2642,7 @@ var InputCheckbox = function (contents)
 var InputColor = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'color')
     .html(contents || '');
 };
 
@@ -2648,7 +2654,7 @@ var InputColor = function (contents)
 var InputDate = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'date')
     .html(contents || '');
 };
 
@@ -2660,7 +2666,7 @@ var InputDate = function (contents)
 var InputDatetimeLocal = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'datetime-local')
     .html(contents || '');
 };
 
@@ -2672,7 +2678,7 @@ var InputDatetimeLocal = function (contents)
 var InputEmail = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'email')
     .html(contents || '');
 };
 
@@ -2684,7 +2690,7 @@ var InputEmail = function (contents)
 var InputFile = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'file')
     .html(contents || '');
 };
 
@@ -2696,7 +2702,7 @@ var InputFile = function (contents)
 var InputHidden = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'hidden')
     .html(contents || '');
 };
 
@@ -2708,7 +2714,7 @@ var InputHidden = function (contents)
 var InputImage = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'image')
     .html(contents || '');
 };
 
@@ -2720,7 +2726,7 @@ var InputImage = function (contents)
 var InputMonth = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'month')
     .html(contents || '');
 };
 
@@ -2732,7 +2738,7 @@ var InputMonth = function (contents)
 var InputNumber = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'number')
     .html(contents || '');
 };
 
@@ -2744,7 +2750,7 @@ var InputNumber = function (contents)
 var InputPassword = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'password')
     .html(contents || '');
 };
 
@@ -2756,7 +2762,7 @@ var InputPassword = function (contents)
 var InputRadio = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'radio')
     .html(contents || '');
 };
 
@@ -2768,7 +2774,7 @@ var InputRadio = function (contents)
 var InputRange = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'range')
     .html(contents || '');
 };
 
@@ -2780,7 +2786,7 @@ var InputRange = function (contents)
 var InputReset = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'reset')
     .html(contents || '');
 };
 
@@ -2792,7 +2798,7 @@ var InputReset = function (contents)
 var InputSearch = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'search')
     .html(contents || '');
 };
 
@@ -2804,7 +2810,7 @@ var InputSearch = function (contents)
 var InputSubmit = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'submit')
     .html(contents || '');
 };
 
@@ -2816,7 +2822,7 @@ var InputSubmit = function (contents)
 var InputTel = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'tel')
     .html(contents || '');
 };
 
@@ -2828,7 +2834,7 @@ var InputTel = function (contents)
 var InputText = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'text')
     .html(contents || '');
 };
 
@@ -2840,7 +2846,7 @@ var InputText = function (contents)
 var InputTime = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'time')
     .html(contents || '');
 };
 
@@ -2852,7 +2858,7 @@ var InputTime = function (contents)
 var InputUrl = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'url')
     .html(contents || '');
 };
 
@@ -2864,7 +2870,7 @@ var InputUrl = function (contents)
 var InputWeek = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'week')
     .html(contents || '');
 };
 
@@ -2875,24 +2881,24 @@ var InputWeek = function (contents)
  */
 var Ins = function (contents)
 {
-  return this.append(type)
+  return this.append('ins')
     .html(contents || '');
 };
 
 /**
- * selection.JustifyContent() creates &lt;input&gt; element of type justify-content
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.JustifyContent() get or change justify-content style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var JustifyContent = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('justify-content');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('justify-content', value);
   }
 };
 
@@ -2903,7 +2909,7 @@ var JustifyContent = function (value)
  */
 var Kbd = function (contents)
 {
-  return this.append(type)
+  return this.append('kbd')
     .html(contents || '');
 };
 
@@ -2914,24 +2920,24 @@ var Kbd = function (contents)
  */
 var Label = function (contents)
 {
-  return this.append(type)
+  return this.append('label')
     .html(contents || '');
 };
 
 /**
- * selection.Left() creates &lt;input&gt; element of type left
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Left() get or change left style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Left = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('left');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('left', value);
   }
 };
 
@@ -2942,24 +2948,24 @@ var Left = function (value)
  */
 var Legend = function (contents)
 {
-  return this.append(type)
+  return this.append('legend')
     .html(contents || '');
 };
 
 /**
- * selection.LetterSpacing() creates &lt;input&gt; element of type letter-spacing
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.LetterSpacing() get or change letter-spacing style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var LetterSpacing = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('letter-spacing');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('letter-spacing', value);
   }
 };
 
@@ -2970,41 +2976,41 @@ var LetterSpacing = function (value)
  */
 var Li = function (contents)
 {
-  return this.append(type)
+  return this.append('li')
     .html(contents || '');
 };
 
 /**
- * selection.LineBreak() creates &lt;input&gt; element of type line-break
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.LineBreak() get or change line-break style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var LineBreak = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('line-break');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('line-break', value);
   }
 };
 
 /**
- * selection.LineHeight() creates &lt;input&gt; element of type line-height
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.LineHeight() get or change line-height style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var LineHeight = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('line-height');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('line-height', value);
   }
 };
 
@@ -3015,7 +3021,7 @@ var LineHeight = function (value)
  */
 var Link = function (contents)
 {
-  return this.append(type)
+  return this.append('link')
     .html(contents || '');
 };
 
@@ -3026,7 +3032,7 @@ var Link = function (contents)
  */
 var Main = function (contents)
 {
-  return this.append(type)
+  return this.append('main')
     .html(contents || '');
 };
 
@@ -3037,92 +3043,92 @@ var Main = function (contents)
  */
 var Map = function (contents)
 {
-  return this.append(type)
+  return this.append('map')
     .html(contents || '');
 };
 
 /**
- * selection.Margin() creates &lt;input&gt; element of type margin
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Margin() get or change margin style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Margin = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('margin');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('margin', value);
   }
 };
 
 /**
- * selection.MarginBottom() creates &lt;input&gt; element of type margin-bottom
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.MarginBottom() get or change margin-bottom style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var MarginBottom = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('margin-bottom');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('margin-bottom', value);
   }
 };
 
 /**
- * selection.MarginLeft() creates &lt;input&gt; element of type margin-left
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.MarginLeft() get or change margin-left style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var MarginLeft = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('margin-left');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('margin-left', value);
   }
 };
 
 /**
- * selection.MarginRight() creates &lt;input&gt; element of type margin-right
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.MarginRight() get or change margin-right style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var MarginRight = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('margin-right');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('margin-right', value);
   }
 };
 
 /**
- * selection.MarginTop() creates &lt;input&gt; element of type margin-top
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.MarginTop() get or change margin-top style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var MarginTop = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('margin-top');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('margin-top', value);
   }
 };
 
@@ -3133,48 +3139,48 @@ var MarginTop = function (value)
  */
 var Mark = function (contents)
 {
-  return this.append(type)
+  return this.append('mark')
     .html(contents || '');
 };
 
 /**
- * selection.MaxHeight() creates &lt;input&gt; element of type max-height
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.MaxHeight() get or change max-height style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var MaxHeight = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('max-height');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('max-height', value);
   }
 };
 
 /**
- * selection.MaxWidth() creates &lt;input&gt; element of type max-width
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.MaxWidth() get or change max-width style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var MaxWidth = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('max-width');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('max-width', value);
   }
 };
 
 /**
- * selection.Media() creates &lt;input&gt; element of type media
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Media() get or change media attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Media = function (value)
 {
@@ -3195,7 +3201,7 @@ var Media = function (value)
  */
 var Meta = function (contents)
 {
-  return this.append(type)
+  return this.append('meta')
     .html(contents || '');
 };
 
@@ -3206,14 +3212,14 @@ var Meta = function (contents)
  */
 var Meter = function (contents)
 {
-  return this.append(type)
+  return this.append('meter')
     .html(contents || '');
 };
 
 /**
- * selection.Method() creates &lt;input&gt; element of type method
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Method() get or change method attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Method = function (value)
 {
@@ -3228,36 +3234,36 @@ var Method = function (value)
 };
 
 /**
- * selection.MinHeight() creates &lt;input&gt; element of type min-height
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.MinHeight() get or change min-height style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var MinHeight = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('min-height');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('min-height', value);
   }
 };
 
 /**
- * selection.MinWidth() creates &lt;input&gt; element of type min-width
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.MinWidth() get or change min-width style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var MinWidth = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('min-width');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('min-width', value);
   }
 };
 
@@ -3269,14 +3275,14 @@ var MinWidth = function (value)
 var Month = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'month')
     .html(contents || '');
 };
 
 /**
- * selection.Name() creates &lt;input&gt; element of type name
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Name() get or change name attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Name = function (value)
 {
@@ -3297,92 +3303,92 @@ var Name = function (value)
  */
 var Nav = function (contents)
 {
-  return this.append(type)
+  return this.append('nav')
     .html(contents || '');
 };
 
 /**
- * selection.NavDown() creates &lt;input&gt; element of type nav-down
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.NavDown() get or change nav-down style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var NavDown = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('nav-down');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('nav-down', value);
   }
 };
 
 /**
- * selection.NavIndex() creates &lt;input&gt; element of type nav-index
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.NavIndex() get or change nav-index style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var NavIndex = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('nav-index');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('nav-index', value);
   }
 };
 
 /**
- * selection.NavLeft() creates &lt;input&gt; element of type nav-left
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.NavLeft() get or change nav-left style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var NavLeft = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('nav-left');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('nav-left', value);
   }
 };
 
 /**
- * selection.NavRight() creates &lt;input&gt; element of type nav-right
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.NavRight() get or change nav-right style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var NavRight = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('nav-right');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('nav-right', value);
   }
 };
 
 /**
- * selection.NavUp() creates &lt;input&gt; element of type nav-up
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.NavUp() get or change nav-up style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var NavUp = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('nav-up');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('nav-up', value);
   }
 };
 
@@ -3393,7 +3399,7 @@ var NavUp = function (value)
  */
 var Noframes = function (contents)
 {
-  return this.append(type)
+  return this.append('noframes')
     .html(contents || '');
 };
 
@@ -3404,7 +3410,7 @@ var Noframes = function (contents)
  */
 var Noscript = function (contents)
 {
-  return this.append(type)
+  return this.append('noscript')
     .html(contents || '');
 };
 
@@ -3416,7 +3422,7 @@ var Noscript = function (contents)
 var Number = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'number')
     .html(contents || '');
 };
 
@@ -3427,7 +3433,7 @@ var Number = function (contents)
  */
 var Object$1 = function (contents)
 {
-  return this.append(type)
+  return this.append('object')
     .html(contents || '');
 };
 
@@ -3438,1591 +3444,1591 @@ var Object$1 = function (contents)
  */
 var Ol = function (contents)
 {
-  return this.append(type)
+  return this.append('ol')
     .html(contents || '');
 };
 
 /**
- * selection.OnAbort() creates &lt;input&gt; element of type abort
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnAbort() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnAbort = function (value, capture)
+var OnAbort = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('abort');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('abort', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('abort', callback, capture);
   }
 };
 
 /**
- * selection.OnAfterprint() creates &lt;input&gt; element of type afterprint
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnAfterprint() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnAfterprint = function (value, capture)
+var OnAfterprint = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('afterprint');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('afterprint', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('afterprint', callback, capture);
   }
 };
 
 /**
- * selection.OnBeforeprint() creates &lt;input&gt; element of type beforeprint
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnBeforeprint() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnBeforeprint = function (value, capture)
+var OnBeforeprint = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('beforeprint');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('beforeprint', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('beforeprint', callback, capture);
   }
 };
 
 /**
- * selection.OnBeforeunload() creates &lt;input&gt; element of type beforeunload
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnBeforeunload() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnBeforeunload = function (value, capture)
+var OnBeforeunload = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('beforeunload');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('beforeunload', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('beforeunload', callback, capture);
   }
 };
 
 /**
- * selection.OnBlur() creates &lt;input&gt; element of type blur
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnBlur() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnBlur = function (value, capture)
+var OnBlur = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('blur');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('blur', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('blur', callback, capture);
   }
 };
 
 /**
- * selection.OnCanplay() creates &lt;input&gt; element of type canplay
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnCanplay() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnCanplay = function (value, capture)
+var OnCanplay = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('canplay');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('canplay', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('canplay', callback, capture);
   }
 };
 
 /**
- * selection.OnCanplaythrough() creates &lt;input&gt; element of type canplaythrough
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnCanplaythrough() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnCanplaythrough = function (value, capture)
+var OnCanplaythrough = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('canplaythrough');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('canplaythrough', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('canplaythrough', callback, capture);
   }
 };
 
 /**
- * selection.OnChange() creates &lt;input&gt; element of type change
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnChange() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnChange = function (value, capture)
+var OnChange = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('change');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('change', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('change', callback, capture);
   }
 };
 
 /**
- * selection.OnClick() creates &lt;input&gt; element of type click
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnClick() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnClick = function (value, capture)
+var OnClick = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('click');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('click', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('click', callback, capture);
   }
 };
 
 /**
- * selection.OnContextmenu() creates &lt;input&gt; element of type contextmenu
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnContextmenu() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnContextmenu = function (value, capture)
+var OnContextmenu = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('contextmenu');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('contextmenu', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('contextmenu', callback, capture);
   }
 };
 
 /**
- * selection.OnCopy() creates &lt;input&gt; element of type copy
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnCopy() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnCopy = function (value, capture)
+var OnCopy = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('copy');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('copy', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('copy', callback, capture);
   }
 };
 
 /**
- * selection.OnCuechange() creates &lt;input&gt; element of type cuechange
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnCuechange() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnCuechange = function (value, capture)
+var OnCuechange = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('cuechange');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('cuechange', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('cuechange', callback, capture);
   }
 };
 
 /**
- * selection.OnCut() creates &lt;input&gt; element of type cut
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnCut() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnCut = function (value, capture)
+var OnCut = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('cut');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('cut', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('cut', callback, capture);
   }
 };
 
 /**
- * selection.OnDblclick() creates &lt;input&gt; element of type dblclick
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnDblclick() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnDblclick = function (value, capture)
+var OnDblclick = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('dblclick');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('dblclick', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('dblclick', callback, capture);
   }
 };
 
 /**
- * selection.OnDrag() creates &lt;input&gt; element of type drag
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnDrag() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnDrag = function (value, capture)
+var OnDrag = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('drag');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('drag', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('drag', callback, capture);
   }
 };
 
 /**
- * selection.OnDragend() creates &lt;input&gt; element of type dragend
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnDragend() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnDragend = function (value, capture)
+var OnDragend = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('dragend');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('dragend', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('dragend', callback, capture);
   }
 };
 
 /**
- * selection.OnDragenter() creates &lt;input&gt; element of type dragenter
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnDragenter() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnDragenter = function (value, capture)
+var OnDragenter = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('dragenter');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('dragenter', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('dragenter', callback, capture);
   }
 };
 
 /**
- * selection.OnDragleave() creates &lt;input&gt; element of type dragleave
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnDragleave() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnDragleave = function (value, capture)
+var OnDragleave = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('dragleave');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('dragleave', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('dragleave', callback, capture);
   }
 };
 
 /**
- * selection.OnDragover() creates &lt;input&gt; element of type dragover
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnDragover() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnDragover = function (value, capture)
+var OnDragover = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('dragover');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('dragover', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('dragover', callback, capture);
   }
 };
 
 /**
- * selection.OnDragstart() creates &lt;input&gt; element of type dragstart
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnDragstart() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnDragstart = function (value, capture)
+var OnDragstart = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('dragstart');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('dragstart', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('dragstart', callback, capture);
   }
 };
 
 /**
- * selection.OnDrop() creates &lt;input&gt; element of type drop
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnDrop() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnDrop = function (value, capture)
+var OnDrop = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('drop');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('drop', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('drop', callback, capture);
   }
 };
 
 /**
- * selection.OnDurationchange() creates &lt;input&gt; element of type durationchange
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnDurationchange() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnDurationchange = function (value, capture)
+var OnDurationchange = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('durationchange');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('durationchange', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('durationchange', callback, capture);
   }
 };
 
 /**
- * selection.OnEmptied() creates &lt;input&gt; element of type emptied
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnEmptied() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnEmptied = function (value, capture)
+var OnEmptied = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('emptied');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('emptied', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('emptied', callback, capture);
   }
 };
 
 /**
- * selection.OnEnded() creates &lt;input&gt; element of type ended
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnEnded() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnEnded = function (value, capture)
+var OnEnded = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('ended');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('ended', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('ended', callback, capture);
   }
 };
 
 /**
- * selection.OnError() creates &lt;input&gt; element of type error
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnError() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnError = function (value, capture)
+var OnError = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('error');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('error', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('error', callback, capture);
   }
 };
 
 /**
- * selection.OnFocus() creates &lt;input&gt; element of type focus
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnFocus() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnFocus = function (value, capture)
+var OnFocus = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('focus');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('focus', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('focus', callback, capture);
   }
 };
 
 /**
- * selection.OnHashchange() creates &lt;input&gt; element of type hashchange
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnHashchange() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnHashchange = function (value, capture)
+var OnHashchange = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('hashchange');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('hashchange', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('hashchange', callback, capture);
   }
 };
 
 /**
- * selection.OnInput() creates &lt;input&gt; element of type input
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnInput() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnInput = function (value, capture)
+var OnInput = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('input');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('input', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('input', callback, capture);
   }
 };
 
 /**
- * selection.OnInvalid() creates &lt;input&gt; element of type invalid
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnInvalid() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnInvalid = function (value, capture)
+var OnInvalid = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('invalid');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('invalid', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('invalid', callback, capture);
   }
 };
 
 /**
- * selection.OnKeydown() creates &lt;input&gt; element of type keydown
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnKeydown() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnKeydown = function (value, capture)
+var OnKeydown = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('keydown');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('keydown', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('keydown', callback, capture);
   }
 };
 
 /**
- * selection.OnKeypress() creates &lt;input&gt; element of type keypress
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnKeypress() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnKeypress = function (value, capture)
+var OnKeypress = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('keypress');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('keypress', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('keypress', callback, capture);
   }
 };
 
 /**
- * selection.OnKeyup() creates &lt;input&gt; element of type keyup
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnKeyup() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnKeyup = function (value, capture)
+var OnKeyup = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('keyup');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('keyup', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('keyup', callback, capture);
   }
 };
 
 /**
- * selection.OnLoad() creates &lt;input&gt; element of type load
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnLoad() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnLoad = function (value, capture)
+var OnLoad = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('load');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('load', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('load', callback, capture);
   }
 };
 
 /**
- * selection.OnLoadeddata() creates &lt;input&gt; element of type loadeddata
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnLoadeddata() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnLoadeddata = function (value, capture)
+var OnLoadeddata = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('loadeddata');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('loadeddata', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('loadeddata', callback, capture);
   }
 };
 
 /**
- * selection.OnLoadedmetadata() creates &lt;input&gt; element of type loadedmetadata
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnLoadedmetadata() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnLoadedmetadata = function (value, capture)
+var OnLoadedmetadata = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('loadedmetadata');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('loadedmetadata', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('loadedmetadata', callback, capture);
   }
 };
 
 /**
- * selection.OnLoadstart() creates &lt;input&gt; element of type loadstart
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnLoadstart() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnLoadstart = function (value, capture)
+var OnLoadstart = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('loadstart');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('loadstart', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('loadstart', callback, capture);
   }
 };
 
 /**
- * selection.OnMessage() creates &lt;input&gt; element of type message
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnMessage() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnMessage = function (value, capture)
+var OnMessage = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('message');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('message', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('message', callback, capture);
   }
 };
 
 /**
- * selection.OnMousedown() creates &lt;input&gt; element of type mousedown
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnMousedown() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnMousedown = function (value, capture)
+var OnMousedown = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('mousedown');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('mousedown', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('mousedown', callback, capture);
   }
 };
 
 /**
- * selection.OnMousemove() creates &lt;input&gt; element of type mousemove
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnMousemove() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnMousemove = function (value, capture)
+var OnMousemove = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('mousemove');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('mousemove', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('mousemove', callback, capture);
   }
 };
 
 /**
- * selection.OnMouseout() creates &lt;input&gt; element of type mouseout
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnMouseout() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnMouseout = function (value, capture)
+var OnMouseout = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('mouseout');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('mouseout', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('mouseout', callback, capture);
   }
 };
 
 /**
- * selection.OnMouseover() creates &lt;input&gt; element of type mouseover
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnMouseover() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnMouseover = function (value, capture)
+var OnMouseover = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('mouseover');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('mouseover', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('mouseover', callback, capture);
   }
 };
 
 /**
- * selection.OnMouseup() creates &lt;input&gt; element of type mouseup
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnMouseup() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnMouseup = function (value, capture)
+var OnMouseup = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('mouseup');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('mouseup', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('mouseup', callback, capture);
   }
 };
 
 /**
- * selection.OnMousewheel() creates &lt;input&gt; element of type mousewheel
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnMousewheel() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnMousewheel = function (value, capture)
+var OnMousewheel = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('mousewheel');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('mousewheel', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('mousewheel', callback, capture);
   }
 };
 
 /**
- * selection.OnOffline() creates &lt;input&gt; element of type offline
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnOffline() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnOffline = function (value, capture)
+var OnOffline = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('offline');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('offline', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('offline', callback, capture);
   }
 };
 
 /**
- * selection.OnOnline() creates &lt;input&gt; element of type online
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnOnline() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnOnline = function (value, capture)
+var OnOnline = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('online');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('online', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('online', callback, capture);
   }
 };
 
 /**
- * selection.OnPagehide() creates &lt;input&gt; element of type pagehide
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnPagehide() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnPagehide = function (value, capture)
+var OnPagehide = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('pagehide');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('pagehide', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('pagehide', callback, capture);
   }
 };
 
 /**
- * selection.OnPageshow() creates &lt;input&gt; element of type pageshow
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnPageshow() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnPageshow = function (value, capture)
+var OnPageshow = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('pageshow');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('pageshow', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('pageshow', callback, capture);
   }
 };
 
 /**
- * selection.OnPaste() creates &lt;input&gt; element of type paste
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnPaste() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnPaste = function (value, capture)
+var OnPaste = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('paste');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('paste', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('paste', callback, capture);
   }
 };
 
 /**
- * selection.OnPause() creates &lt;input&gt; element of type pause
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnPause() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnPause = function (value, capture)
+var OnPause = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('pause');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('pause', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('pause', callback, capture);
   }
 };
 
 /**
- * selection.OnPlay() creates &lt;input&gt; element of type play
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnPlay() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnPlay = function (value, capture)
+var OnPlay = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('play');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('play', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('play', callback, capture);
   }
 };
 
 /**
- * selection.OnPlaying() creates &lt;input&gt; element of type playing
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnPlaying() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnPlaying = function (value, capture)
+var OnPlaying = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('playing');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('playing', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('playing', callback, capture);
   }
 };
 
 /**
- * selection.OnPopstate() creates &lt;input&gt; element of type popstate
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnPopstate() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnPopstate = function (value, capture)
+var OnPopstate = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('popstate');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('popstate', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('popstate', callback, capture);
   }
 };
 
 /**
- * selection.OnProgress() creates &lt;input&gt; element of type progress
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnProgress() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnProgress = function (value, capture)
+var OnProgress = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('progress');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('progress', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('progress', callback, capture);
   }
 };
 
 /**
- * selection.OnRatechange() creates &lt;input&gt; element of type ratechange
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnRatechange() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnRatechange = function (value, capture)
+var OnRatechange = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('ratechange');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('ratechange', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('ratechange', callback, capture);
   }
 };
 
 /**
- * selection.OnReset() creates &lt;input&gt; element of type reset
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnReset() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnReset = function (value, capture)
+var OnReset = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('reset');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('reset', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('reset', callback, capture);
   }
 };
 
 /**
- * selection.OnResize() creates &lt;input&gt; element of type resize
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnResize() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnResize = function (value, capture)
+var OnResize = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('resize');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('resize', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('resize', callback, capture);
   }
 };
 
 /**
- * selection.OnScroll() creates &lt;input&gt; element of type scroll
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnScroll() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnScroll = function (value, capture)
+var OnScroll = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('scroll');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('scroll', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('scroll', callback, capture);
   }
 };
 
 /**
- * selection.OnSearch() creates &lt;input&gt; element of type search
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnSearch() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnSearch = function (value, capture)
+var OnSearch = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('search');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('search', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('search', callback, capture);
   }
 };
 
 /**
- * selection.OnSeeked() creates &lt;input&gt; element of type seeked
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnSeeked() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnSeeked = function (value, capture)
+var OnSeeked = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('seeked');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('seeked', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('seeked', callback, capture);
   }
 };
 
 /**
- * selection.OnSeeking() creates &lt;input&gt; element of type seeking
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnSeeking() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnSeeking = function (value, capture)
+var OnSeeking = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('seeking');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('seeking', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('seeking', callback, capture);
   }
 };
 
 /**
- * selection.OnSelect() creates &lt;input&gt; element of type select
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnSelect() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnSelect = function (value, capture)
+var OnSelect = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('select');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('select', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('select', callback, capture);
   }
 };
 
 /**
- * selection.OnShow() creates &lt;input&gt; element of type show
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnShow() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnShow = function (value, capture)
+var OnShow = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('show');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('show', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('show', callback, capture);
   }
 };
 
 /**
- * selection.OnStalled() creates &lt;input&gt; element of type stalled
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnStalled() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnStalled = function (value, capture)
+var OnStalled = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('stalled');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('stalled', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('stalled', callback, capture);
   }
 };
 
 /**
- * selection.OnStorage() creates &lt;input&gt; element of type storage
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnStorage() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnStorage = function (value, capture)
+var OnStorage = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('storage');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('storage', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('storage', callback, capture);
   }
 };
 
 /**
- * selection.OnSubmit() creates &lt;input&gt; element of type submit
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnSubmit() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnSubmit = function (value, capture)
+var OnSubmit = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('submit');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('submit', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('submit', callback, capture);
   }
 };
 
 /**
- * selection.OnSuspend() creates &lt;input&gt; element of type suspend
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnSuspend() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnSuspend = function (value, capture)
+var OnSuspend = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('suspend');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('suspend', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('suspend', callback, capture);
   }
 };
 
 /**
- * selection.OnTimeupdate() creates &lt;input&gt; element of type timeupdate
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnTimeupdate() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnTimeupdate = function (value, capture)
+var OnTimeupdate = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('timeupdate');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('timeupdate', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('timeupdate', callback, capture);
   }
 };
 
 /**
- * selection.OnToggle() creates &lt;input&gt; element of type toggle
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnToggle() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnToggle = function (value, capture)
+var OnToggle = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('toggle');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('toggle', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('toggle', callback, capture);
   }
 };
 
 /**
- * selection.OnUnload() creates &lt;input&gt; element of type unload
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnUnload() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnUnload = function (value, capture)
+var OnUnload = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('unload');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('unload', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('unload', callback, capture);
   }
 };
 
 /**
- * selection.OnVolumechange() creates &lt;input&gt; element of type volumechange
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnVolumechange() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnVolumechange = function (value, capture)
+var OnVolumechange = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('volumechange');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('volumechange', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('volumechange', callback, capture);
   }
 };
 
 /**
- * selection.OnWaiting() creates &lt;input&gt; element of type waiting
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnWaiting() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnWaiting = function (value, capture)
+var OnWaiting = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('waiting');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('waiting', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('waiting', callback, capture);
   }
 };
 
 /**
- * selection.OnWheel() creates &lt;input&gt; element of type wheel
- * @param {string} [value] option content html
- * @param {boolean} [capture] option content html
- * @return created element
+ * selection.OnWheel() attaches or returns a listner to selection
+ * @param {string} [callback] callback function
+ * @param {boolean} [capture] capture option
+ * @return selected if setting or current value
  */
-var OnWheel = function (value, capture)
+var OnWheel = function (callback, capture)
 {
   if (arguments.length < 1)
   {
-    return this.on(type);
+    return this.on('wheel');
   }
   else if (arguments.length < 2)
   {
-    return this.on(type, value);
+    return this.on('wheel', callback);
   }
   else
   {
-    return this.on(type, value, capture);
+    return this.on('wheel', callback, capture);
   }
 };
 
@@ -5033,7 +5039,7 @@ var OnWheel = function (value, capture)
  */
 var Optgroup = function (contents)
 {
-  return this.append(type)
+  return this.append('optgroup')
     .html(contents || '');
 };
 
@@ -5044,15 +5050,15 @@ var Optgroup = function (contents)
  */
 var Option = function (contents)
 {
-  return this.append(type)
+  return this.append('option')
     .html(contents || '');
 };
 
 /**
- * selection.Options() creates a list of &lt;option&gt; elements
- * @param {string} [options=''] option content html
- * @param {string} [selected=''] option content html
- * @return created element
+ * selection.Options() creates a list of child &lt;option&gt; elements
+ * @param {string} [options=''] array of strngs or key value object containing labels
+ * @param {string} [selected=''] selected element
+ * @return selected
  */
 var Options = function (options, selected)
 {
@@ -5090,104 +5096,104 @@ function id (i)
 }
 
 /**
- * selection.Order() creates &lt;input&gt; element of type order
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Order() get or change order style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Order = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('order');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('order', value);
   }
 };
 
 /**
- * selection.Outline() creates &lt;input&gt; element of type outline
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Outline() get or change outline style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Outline = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('outline');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('outline', value);
   }
 };
 
 /**
- * selection.OutlineColor() creates &lt;input&gt; element of type outline-color
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.OutlineColor() get or change outline-color style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var OutlineColor = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('outline-color');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('outline-color', value);
   }
 };
 
 /**
- * selection.OutlineOffset() creates &lt;input&gt; element of type outline-offset
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.OutlineOffset() get or change outline-offset style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var OutlineOffset = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('outline-offset');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('outline-offset', value);
   }
 };
 
 /**
- * selection.OutlineStyle() creates &lt;input&gt; element of type outline-style
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.OutlineStyle() get or change outline-style style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var OutlineStyle = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('outline-style');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('outline-style', value);
   }
 };
 
 /**
- * selection.OutlineWidth() creates &lt;input&gt; element of type outline-width
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.OutlineWidth() get or change outline-width style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var OutlineWidth = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('outline-width');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('outline-width', value);
   }
 };
 
@@ -5198,75 +5204,75 @@ var OutlineWidth = function (value)
  */
 var Output = function (contents)
 {
-  return this.append(type)
+  return this.append('output')
     .html(contents || '');
 };
 
 /**
- * selection.Overflow() creates &lt;input&gt; element of type overflow
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Overflow() get or change overflow style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Overflow = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('overflow');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('overflow', value);
   }
 };
 
 /**
- * selection.OverflowWrap() creates &lt;input&gt; element of type overflow-wrap
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.OverflowWrap() get or change overflow-wrap style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var OverflowWrap = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('overflow-wrap');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('overflow-wrap', value);
   }
 };
 
 /**
- * selection.OverflowX() creates &lt;input&gt; element of type overflow-x
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.OverflowX() get or change overflow-x style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var OverflowX = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('overflow-x');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('overflow-x', value);
   }
 };
 
 /**
- * selection.OverflowY() creates &lt;input&gt; element of type overflow-y
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.OverflowY() get or change overflow-y style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var OverflowY = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('overflow-y');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('overflow-y', value);
   }
 };
 
@@ -5277,92 +5283,92 @@ var OverflowY = function (value)
  */
 var P = function (contents)
 {
-  return this.append(type)
+  return this.append('p')
     .html(contents || '');
 };
 
 /**
- * selection.Padding() creates &lt;input&gt; element of type padding
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Padding() get or change padding style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Padding = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('padding');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('padding', value);
   }
 };
 
 /**
- * selection.PaddingBottom() creates &lt;input&gt; element of type padding-bottom
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.PaddingBottom() get or change padding-bottom style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var PaddingBottom = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('padding-bottom');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('padding-bottom', value);
   }
 };
 
 /**
- * selection.PaddingLeft() creates &lt;input&gt; element of type padding-left
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.PaddingLeft() get or change padding-left style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var PaddingLeft = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('padding-left');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('padding-left', value);
   }
 };
 
 /**
- * selection.PaddingRight() creates &lt;input&gt; element of type padding-right
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.PaddingRight() get or change padding-right style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var PaddingRight = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('padding-right');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('padding-right', value);
   }
 };
 
 /**
- * selection.PaddingTop() creates &lt;input&gt; element of type padding-top
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.PaddingTop() get or change padding-top style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var PaddingTop = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('padding-top');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('padding-top', value);
   }
 };
 
@@ -5373,24 +5379,24 @@ var PaddingTop = function (value)
  */
 var Param = function (contents)
 {
-  return this.append(type)
+  return this.append('param')
     .html(contents || '');
 };
 
 /**
- * selection.ParentNode() creates &lt;input&gt; element of type parentNode
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.ParentNode() get or change parentNode property value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var ParentNode = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.property(type);
+    return this.property('parentNode');
   }
   else
   {
-    return this.property(type, value);
+    return this.property('parentNode', value);
   }
 };
 
@@ -5402,14 +5408,14 @@ var ParentNode = function (value)
 var Password = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'password')
     .html(contents || '');
 };
 
 /**
- * selection.Pattern() creates &lt;input&gt; element of type pattern
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Pattern() get or change pattern attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Pattern = function (value)
 {
@@ -5424,9 +5430,9 @@ var Pattern = function (value)
 };
 
 /**
- * selection.Placeholder() creates &lt;input&gt; element of type placeholder
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Placeholder() get or change placeholder attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Placeholder = function (value)
 {
@@ -5441,19 +5447,19 @@ var Placeholder = function (value)
 };
 
 /**
- * selection.Position() creates &lt;input&gt; element of type position
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Position() get or change position style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Position = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('position');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('position', value);
   }
 };
 
@@ -5464,7 +5470,7 @@ var Position = function (value)
  */
 var Pre = function (contents)
 {
-  return this.append(type)
+  return this.append('pre')
     .html(contents || '');
 };
 
@@ -5475,7 +5481,7 @@ var Pre = function (contents)
  */
 var Progress = function (contents)
 {
-  return this.append(type)
+  return this.append('progress')
     .html(contents || '');
 };
 
@@ -5486,7 +5492,7 @@ var Progress = function (contents)
  */
 var Q = function (contents)
 {
-  return this.append(type)
+  return this.append('q')
     .html(contents || '');
 };
 
@@ -5498,7 +5504,7 @@ var Q = function (contents)
 var Radio = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'radio')
     .html(contents || '');
 };
 
@@ -5510,7 +5516,7 @@ var Radio = function (contents)
 var Range = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'range')
     .html(contents || '');
 };
 
@@ -5522,48 +5528,48 @@ var Range = function (contents)
 var Reset = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'reset')
     .html(contents || '');
 };
 
 /**
- * selection.Resize() creates &lt;input&gt; element of type resize
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Resize() get or change resize style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Resize = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('resize');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('resize', value);
   }
 };
 
 /**
- * selection.Right() creates &lt;input&gt; element of type right
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Right() get or change right style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Right = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('right');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('right', value);
   }
 };
 
 /**
- * selection.Rowspan() creates &lt;input&gt; element of type rowspan
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Rowspan() get or change rowspan attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Rowspan = function (value)
 {
@@ -5584,7 +5590,7 @@ var Rowspan = function (value)
  */
 var Rp = function (contents)
 {
-  return this.append(type)
+  return this.append('rp')
     .html(contents || '');
 };
 
@@ -5595,7 +5601,7 @@ var Rp = function (contents)
  */
 var Rt = function (contents)
 {
-  return this.append(type)
+  return this.append('rt')
     .html(contents || '');
 };
 
@@ -5606,7 +5612,7 @@ var Rt = function (contents)
  */
 var Rtc = function (contents)
 {
-  return this.append(type)
+  return this.append('rtc')
     .html(contents || '');
 };
 
@@ -5617,7 +5623,7 @@ var Rtc = function (contents)
  */
 var Ruby = function (contents)
 {
-  return this.append(type)
+  return this.append('ruby')
     .html(contents || '');
 };
 
@@ -5628,7 +5634,7 @@ var Ruby = function (contents)
  */
 var S = function (contents)
 {
-  return this.append(type)
+  return this.append('s')
     .html(contents || '');
 };
 
@@ -5639,7 +5645,7 @@ var S = function (contents)
  */
 var Samp = function (contents)
 {
-  return this.append(type)
+  return this.append('samp')
     .html(contents || '');
 };
 
@@ -5650,7 +5656,7 @@ var Samp = function (contents)
  */
 var Script = function (contents)
 {
-  return this.append(type)
+  return this.append('script')
     .html(contents || '');
 };
 
@@ -5662,7 +5668,7 @@ var Script = function (contents)
 var Search = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'search')
     .html(contents || '');
 };
 
@@ -5673,7 +5679,7 @@ var Search = function (contents)
  */
 var Section = function (contents)
 {
-  return this.append(type)
+  return this.append('section')
     .html(contents || '');
 };
 
@@ -5684,14 +5690,14 @@ var Section = function (contents)
  */
 var Select = function (contents)
 {
-  return this.append(type)
+  return this.append('select')
     .html(contents || '');
 };
 
 /**
- * selection.Selected() creates &lt;input&gt; element of type selected
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Selected() get or change selected attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Selected = function (value)
 {
@@ -5712,7 +5718,7 @@ var Selected = function (value)
  */
 var Shadow = function (contents)
 {
-  return this.append(type)
+  return this.append('shadow')
     .html(contents || '');
 };
 
@@ -5723,7 +5729,7 @@ var Shadow = function (contents)
  */
 var Small = function (contents)
 {
-  return this.append(type)
+  return this.append('small')
     .html(contents || '');
 };
 
@@ -5734,7 +5740,7 @@ var Small = function (contents)
  */
 var Source = function (contents)
 {
-  return this.append(type)
+  return this.append('source')
     .html(contents || '');
 };
 
@@ -5745,14 +5751,14 @@ var Source = function (contents)
  */
 var Span = function (contents)
 {
-  return this.append(type)
+  return this.append('span')
     .html(contents || '');
 };
 
 /**
- * selection.Src() creates &lt;input&gt; element of type src
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Src() get or change src attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Src = function (value)
 {
@@ -5773,7 +5779,7 @@ var Src = function (value)
  */
 var Strong = function (contents)
 {
-  return this.append(type)
+  return this.append('strong')
     .html(contents || '');
 };
 
@@ -5784,7 +5790,7 @@ var Strong = function (contents)
  */
 var Sub = function (contents)
 {
-  return this.append(type)
+  return this.append('sub')
     .html(contents || '');
 };
 
@@ -5796,7 +5802,7 @@ var Sub = function (contents)
 var Submit = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'submit')
     .html(contents || '');
 };
 
@@ -5807,7 +5813,7 @@ var Submit = function (contents)
  */
 var Summary = function (contents)
 {
-  return this.append(type)
+  return this.append('summary')
     .html(contents || '');
 };
 
@@ -5818,7 +5824,7 @@ var Summary = function (contents)
  */
 var Sup = function (contents)
 {
-  return this.append(type)
+  return this.append('sup')
     .html(contents || '');
 };
 
@@ -5829,31 +5835,31 @@ var Sup = function (contents)
  */
 var Svg = function (contents)
 {
-  return this.append(type)
+  return this.append('svg')
     .html(contents || '');
 };
 
 /**
- * selection.TabSize() creates &lt;input&gt; element of type tab-size
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TabSize() get or change tab-size style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TabSize = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('tab-size');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('tab-size', value);
   }
 };
 
 /**
- * selection.Tabindex() creates &lt;input&gt; element of type tabindex
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Tabindex() get or change tabindex attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Tabindex = function (value)
 {
@@ -5874,31 +5880,31 @@ var Tabindex = function (value)
  */
 var Table = function (contents)
 {
-  return this.append(type)
+  return this.append('table')
     .html(contents || '');
 };
 
 /**
- * selection.TableLayout() creates &lt;input&gt; element of type table-layout
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TableLayout() get or change table-layout style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TableLayout = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('table-layout');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('table-layout', value);
   }
 };
 
 /**
- * selection.Target() creates &lt;input&gt; element of type target
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Target() get or change target attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Target = function (value)
 {
@@ -5919,7 +5925,7 @@ var Target = function (value)
  */
 var Tbody = function (contents)
 {
-  return this.append(type)
+  return this.append('tbody')
     .html(contents || '');
 };
 
@@ -5930,7 +5936,7 @@ var Tbody = function (contents)
  */
 var Td = function (contents)
 {
-  return this.append(type)
+  return this.append('td')
     .html(contents || '');
 };
 
@@ -5942,7 +5948,7 @@ var Td = function (contents)
 var Tel = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'tel')
     .html(contents || '');
 };
 
@@ -5953,7 +5959,7 @@ var Tel = function (contents)
  */
 var Template = function (contents)
 {
-  return this.append(type)
+  return this.append('template')
     .html(contents || '');
 };
 
@@ -5965,228 +5971,228 @@ var Template = function (contents)
 var Text = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'text')
     .html(contents || '');
 };
 
 /**
- * selection.TextAlign() creates &lt;input&gt; element of type text-align
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextAlign() get or change text-align style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextAlign = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-align');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-align', value);
   }
 };
 
 /**
- * selection.TextAlignLast() creates &lt;input&gt; element of type text-align-last
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextAlignLast() get or change text-align-last style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextAlignLast = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-align-last');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-align-last', value);
   }
 };
 
 /**
- * selection.TextCombineUpright() creates &lt;input&gt; element of type text-combine-upright
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextCombineUpright() get or change text-combine-upright style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextCombineUpright = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-combine-upright');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-combine-upright', value);
   }
 };
 
 /**
- * selection.TextDecoration() creates &lt;input&gt; element of type text-decoration
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextDecoration() get or change text-decoration style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextDecoration = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-decoration');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-decoration', value);
   }
 };
 
 /**
- * selection.TextDecorationColor() creates &lt;input&gt; element of type text-decoration-color
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextDecorationColor() get or change text-decoration-color style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextDecorationColor = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-decoration-color');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-decoration-color', value);
   }
 };
 
 /**
- * selection.TextDecorationLine() creates &lt;input&gt; element of type text-decoration-line
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextDecorationLine() get or change text-decoration-line style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextDecorationLine = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-decoration-line');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-decoration-line', value);
   }
 };
 
 /**
- * selection.TextDecorationStyle() creates &lt;input&gt; element of type text-decoration-style
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextDecorationStyle() get or change text-decoration-style style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextDecorationStyle = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-decoration-style');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-decoration-style', value);
   }
 };
 
 /**
- * selection.TextIndent() creates &lt;input&gt; element of type text-indent
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextIndent() get or change text-indent style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextIndent = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-indent');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-indent', value);
   }
 };
 
 /**
- * selection.TextJustify() creates &lt;input&gt; element of type text-justify
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextJustify() get or change text-justify style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextJustify = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-justify');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-justify', value);
   }
 };
 
 /**
- * selection.TextOverflow() creates &lt;input&gt; element of type text-overflow
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextOverflow() get or change text-overflow style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextOverflow = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-overflow');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-overflow', value);
   }
 };
 
 /**
- * selection.TextShadow() creates &lt;input&gt; element of type text-shadow
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextShadow() get or change text-shadow style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextShadow = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-shadow');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-shadow', value);
   }
 };
 
 /**
- * selection.TextTransform() creates &lt;input&gt; element of type text-transform
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextTransform() get or change text-transform style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextTransform = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-transform');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-transform', value);
   }
 };
 
 /**
- * selection.TextUnderlinePosition() creates &lt;input&gt; element of type text-underline-position
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.TextUnderlinePosition() get or change text-underline-position style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var TextUnderlinePosition = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('text-underline-position');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('text-underline-position', value);
   }
 };
 
@@ -6197,7 +6203,7 @@ var TextUnderlinePosition = function (value)
  */
 var Textarea = function (contents)
 {
-  return this.append(type)
+  return this.append('textarea')
     .html(contents || '');
 };
 
@@ -6208,7 +6214,7 @@ var Textarea = function (contents)
  */
 var Tfoot = function (contents)
 {
-  return this.append(type)
+  return this.append('tfoot')
     .html(contents || '');
 };
 
@@ -6219,7 +6225,7 @@ var Tfoot = function (contents)
  */
 var Th = function (contents)
 {
-  return this.append(type)
+  return this.append('th')
     .html(contents || '');
 };
 
@@ -6230,7 +6236,7 @@ var Th = function (contents)
  */
 var Thead = function (contents)
 {
-  return this.append(type)
+  return this.append('thead')
     .html(contents || '');
 };
 
@@ -6242,14 +6248,14 @@ var Thead = function (contents)
 var Time = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'time')
     .html(contents || '');
 };
 
 /**
- * selection.Title() creates &lt;input&gt; element of type title
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Title() get or change title attribute value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Title = function (value)
 {
@@ -6264,19 +6270,19 @@ var Title = function (value)
 };
 
 /**
- * selection.Top() creates &lt;input&gt; element of type top
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Top() get or change top style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Top = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('top');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('top', value);
   }
 };
 
@@ -6287,7 +6293,7 @@ var Top = function (value)
  */
 var Tr = function (contents)
 {
-  return this.append(type)
+  return this.append('tr')
     .html(contents || '');
 };
 
@@ -6298,7 +6304,7 @@ var Tr = function (contents)
  */
 var Track = function (contents)
 {
-  return this.append(type)
+  return this.append('track')
     .html(contents || '');
 };
 
@@ -6309,7 +6315,7 @@ var Track = function (contents)
  */
 var U = function (contents)
 {
-  return this.append(type)
+  return this.append('u')
     .html(contents || '');
 };
 
@@ -6320,7 +6326,7 @@ var U = function (contents)
  */
 var Ul = function (contents)
 {
-  return this.append(type)
+  return this.append('ul')
     .html(contents || '');
 };
 
@@ -6332,58 +6338,58 @@ var Ul = function (contents)
 var Url = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'url')
     .html(contents || '');
 };
 
 /**
- * selection.UserSelect() creates &lt;input&gt; element of type user-select
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.UserSelect() get or change user-select style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var UserSelect = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('user-select');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('user-select', value);
   }
 };
 
 /**
- * selection.Validity() creates &lt;input&gt; element of type validity
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Validity() get or change validity property value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Validity = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.property(type);
+    return this.property('validity');
   }
   else
   {
-    return this.property(type, value);
+    return this.property('validity', value);
   }
 };
 
 /**
- * selection.Value() creates &lt;input&gt; element of type value
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Value() get or change value property value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Value = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.property(type);
+    return this.property('value');
   }
   else
   {
-    return this.property(type, value);
+    return this.property('value', value);
   }
 };
 
@@ -6394,24 +6400,24 @@ var Value = function (value)
  */
 var Var = function (contents)
 {
-  return this.append(type)
+  return this.append('var')
     .html(contents || '');
 };
 
 /**
- * selection.VerticalAlign() creates &lt;input&gt; element of type vertical-align
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.VerticalAlign() get or change vertical-align style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var VerticalAlign = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('vertical-align');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('vertical-align', value);
   }
 };
 
@@ -6422,24 +6428,24 @@ var VerticalAlign = function (value)
  */
 var Video = function (contents)
 {
-  return this.append(type)
+  return this.append('video')
     .html(contents || '');
 };
 
 /**
- * selection.Visibility() creates &lt;input&gt; element of type visibility
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Visibility() get or change visibility style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Visibility = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('visibility');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('visibility', value);
   }
 };
 
@@ -6450,7 +6456,7 @@ var Visibility = function (value)
  */
 var Wbr = function (contents)
 {
-  return this.append(type)
+  return this.append('wbr')
     .html(contents || '');
 };
 
@@ -6462,114 +6468,114 @@ var Wbr = function (contents)
 var Week = function (contents)
 {
   return this.append('input')
-    .attr('type', type)
+    .attr('type', 'week')
     .html(contents || '');
 };
 
 /**
- * selection.WhiteSpace() creates &lt;input&gt; element of type white-space
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.WhiteSpace() get or change white-space style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var WhiteSpace = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('white-space');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('white-space', value);
   }
 };
 
 /**
- * selection.Width() creates &lt;input&gt; element of type width
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.Width() get or change width style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var Width = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('width');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('width', value);
   }
 };
 
 /**
- * selection.WordBreak() creates &lt;input&gt; element of type word-break
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.WordBreak() get or change word-break style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var WordBreak = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('word-break');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('word-break', value);
   }
 };
 
 /**
- * selection.WordSpacing() creates &lt;input&gt; element of type word-spacing
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.WordSpacing() get or change word-spacing style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var WordSpacing = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('word-spacing');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('word-spacing', value);
   }
 };
 
 /**
- * selection.WordWrap() creates &lt;input&gt; element of type word-wrap
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.WordWrap() get or change word-wrap style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var WordWrap = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('word-wrap');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('word-wrap', value);
   }
 };
 
 /**
- * selection.ZIndex() creates &lt;input&gt; element of type z-index
- * @param {string} [value=''] option content html
- * @return created element
+ * selection.ZIndex() get or change z-index style value of selection
+ * @param {string} [value=''] new value or dont specify to return current value
+ * @return selected if setting or current value
  */
 var ZIndex = function (value)
 {
   if (arguments.length < 1)
   {
-    return this.style(type);
+    return this.style('z-index');
   }
   else
   {
-    return this.style(type, value);
+    return this.style('z-index', value);
   }
 };
 
 /**
- * selection.clear() empties selected container
+ * selection.clear() clears selection content
  */
 var clear = function ()
 {
