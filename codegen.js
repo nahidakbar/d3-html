@@ -598,7 +598,8 @@ export default function (arrayData, childElementTagName, updateCallback)
 function childNodesSelector ()
 {
   return this.childNodes;
-}`);
+}
+`);
 
 fs.writeFileSync(`src/selection/Options.js`,
 `/**
