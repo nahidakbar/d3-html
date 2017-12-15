@@ -10,7 +10,7 @@ export default function (arrayData, childElementTagName, updateCallback)
   var parent = this;
   // remove stray elements
   parent.selectAll(childNodesSelector)
-    .filter(function()
+    .filter(function ()
     {
       return this.tagName !== childElementTagName;
     })

@@ -610,7 +610,7 @@ export default function (arrayData, childElementTagName, updateCallback)
   var parent = this;
   // remove stray elements
   parent.selectAll(childNodesSelector)
-    .filter(function()
+    .filter(function ()
     {
       return this.tagName !== childElementTagName;
     })
@@ -638,23 +638,27 @@ export default function (options, selected)
 {
   if (Array.isArray(options))
   {
-    return this.Children(options, 'option', function(elem)
+    return this.Children(options, 'option', function (elem)
     {
-      elem.html(id).attr('selected', function(i)
-      {
-         return (i === selected? 'selected' : null);
-      });
+      elem.html(id)
+        .attr('selected', function (i)
+        {
+          return (i === selected ? 'selected' : null);
+        });
     });
   }
   else
   {
-    return this.Children(Object.keys(options), 'option', function(elem)
+    return this.Children(Object.keys(options), 'option', function (elem)
     {
-      elem.html(function(i) { return options[i] })
-        .attr('value', id)
-        .attr('selected', function(i)
+      elem.html(function (i)
         {
-          return ((i === selected || options[i] === selected)? 'selected' : null);
+          return options[i]
+        })
+        .attr('value', id)
+        .attr('selected', function (i)
+        {
+          return ((i === selected || options[i] === selected) ? 'selected' : null);
         });
     });
   }
@@ -727,30 +731,36 @@ export default function (context, dontRun)
     var params = {
       page: ''
     };
-    input.substr(1).split('&').map(function(x)
-    {
-      return x.split('=', 2);
-    }).forEach(function(fragment)
-    {
-      params[fragment[0]] = fragment[1] || true;
-    });
+    input.substr(1)
+      .split('&')
+      .map(function (x)
+      {
+        return x.split('=', 2);
+      })
+      .forEach(function (fragment)
+      {
+        params[fragment[0]] = fragment[1] || true;
+      });
     return params;
   };
 
   context.SearchParams = function (input)
   {
-    input.substr(1).split('&').map(function(x)
-    {
-      return x.split('=', 2);
-    }).forEach(function(fragment)
-    {
-      params[fragment[0]] = fragment[1] || true;
-    });
+    input.substr(1)
+      .split('&')
+      .map(function (x)
+      {
+        return x.split('=', 2);
+      })
+      .forEach(function (fragment)
+      {
+        params[fragment[0]] = fragment[1] || true;
+      });
   };
 
   context.Reload = function ()
   {
-    if(window.location.search)
+    if (window.location.search)
     {
       window.location.hash = context.Link(context.SearchParams(window.location.search));
       window.location.search = '';
@@ -766,7 +776,7 @@ export default function (context, dontRun)
   context.params = context.params || {};
   if (!dontRun)
   {
-    window.onhashchange = function()
+    window.onhashchange = function ()
     {
       context.Reload();
     };

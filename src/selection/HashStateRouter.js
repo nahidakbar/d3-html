@@ -63,30 +63,36 @@ export default function (context, dontRun)
     var params = {
       page: ''
     };
-    input.substr(1).split('&').map(function(x)
-    {
-      return x.split('=', 2);
-    }).forEach(function(fragment)
-    {
-      params[fragment[0]] = fragment[1] || true;
-    });
+    input.substr(1)
+      .split('&')
+      .map(function (x)
+      {
+        return x.split('=', 2);
+      })
+      .forEach(function (fragment)
+      {
+        params[fragment[0]] = fragment[1] || true;
+      });
     return params;
   };
 
   context.SearchParams = function (input)
   {
-    input.substr(1).split('&').map(function(x)
-    {
-      return x.split('=', 2);
-    }).forEach(function(fragment)
-    {
-      params[fragment[0]] = fragment[1] || true;
-    });
+    input.substr(1)
+      .split('&')
+      .map(function (x)
+      {
+        return x.split('=', 2);
+      })
+      .forEach(function (fragment)
+      {
+        params[fragment[0]] = fragment[1] || true;
+      });
   };
 
   context.Reload = function ()
   {
-    if(window.location.search)
+    if (window.location.search)
     {
       window.location.hash = context.Link(context.SearchParams(window.location.search));
       window.location.search = '';
@@ -102,7 +108,7 @@ export default function (context, dontRun)
   context.params = context.params || {};
   if (!dontRun)
   {
-    window.onhashchange = function()
+    window.onhashchange = function ()
     {
       context.Reload();
     };
