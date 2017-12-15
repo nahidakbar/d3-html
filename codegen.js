@@ -1,33 +1,5 @@
 const fs = require('fs');
 
-
-// "use strict";
-//
-// var d3 = window.d3 || require("d3-selection");
-// var selection = d3.selection;
-
-// common operations
-
-//
-// function childNodesSelector()
-// {
-//   return this.childNodes;
-// }
-//
-
-
-//
-
-//
-
-//
-// // enter / exit wrapper
-//
-
-
-fs.writeFileSync('src/index.js', `
-`);
-
 fs.writeFileSync('src/selection/clear.js', `/**
  * selection.clear() empties selected container
  */
@@ -622,7 +594,11 @@ export default function (arrayData, childElementTagName, updateCallback)
   updateCallback(rows, false);
   return this;
 }
-`);
+
+function childNodesSelector ()
+{
+  return this.childNodes;
+}`);
 
 fs.writeFileSync(`src/selection/Options.js`,
 `/**
@@ -788,3 +764,16 @@ export default function (context, dontRun)
   return context;
 }
 `);
+
+let output = `const d3 = window && window.d3 || require("d3-selection");
+const selection = d3.selection;
+`;
+
+for (const mod of fs.readdirSync('src/selection'))
+{
+  const file = mod.substr(0, mod.indexOf('.'))
+  output += `selection.prototype.${file} = require('./selection/${file}');
+`;
+}
+
+fs.writeFileSync('src/index.js', output);

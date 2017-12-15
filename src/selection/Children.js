@@ -25,3 +25,8 @@ export default function (arrayData, childElementTagName, updateCallback)
   updateCallback(rows, false);
   return this;
 }
+
+function childNodesSelector ()
+{
+  return this.childNodes;
+}
