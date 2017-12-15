@@ -1,23 +1,13 @@
-"use strict";
+const fs = require('fs');
 
-var d3 = window.d3 || require("d3-selection");
-var selection = d3.selection;
-
-// common operations
-
-selection.prototype.clear = function()
+fs.writeFileSync('lib/selection/clear.js', `/**
+ * selection.clear() empties selected container
+ */
+export default function ()
 {
   return this.text('');
-};
-
-function childNodesSelector()
-{
-  return this.childNodes;
 }
-
-function id(i) {
-  return i;
-}
+`);
 
 function ToD3HtmlName(name) {
   return name.split('-').map(function(fragment)
@@ -26,8 +16,7 @@ function ToD3HtmlName(name) {
   }).join('');
 }
 
-// common elements https://www.w3schools.com/TAgs/
-[
+const TAGS = [
   'a',
   'abbr',
   'address',
@@ -134,17 +123,27 @@ function ToD3HtmlName(name) {
   'var',
   'video',
   'wbr'
-].forEach(function (type)
+];
+
+for (const tag of TAGS)
 {
-  selection.prototype[ToD3HtmlName(type)] = function (contents)
-  {
-    return this.append(type)
-      .html(contents || '');
-  };
-});
+  const name = ToD3HtmlName(tag);
+  fs.writeFileSync(`lib/selection/${name}.js`,
+`/**
+ * selection.${name}() creates &lt;${tag}&gt; element
+ * @param {string} [contents=''] option content html
+ * @return created element
+ */
+export default function (contents)
+{
+  return this.append(type)
+    .html(contents || '');
+}
+`);
+}
 
 // input https://www.w3schools.com/tags/att_input_type.asp
-[
+const INPUT_TYPE = [
   'checkbox',
   'color',
   'date',
@@ -166,40 +165,30 @@ function ToD3HtmlName(name) {
   'text',
   'url',
   'week'
-].forEach(function (type)
-{
-  selection.prototype[ToD3HtmlName(type)] = selection.prototype[ToD3HtmlName("input-" + type)] = function (contents)
-  {
-    return this.append('input')
-      .attr('type', type)
-      .html(contents || '');
-  };
-});
+]
 
-selection.prototype.Options = function (options, selected)
+for (const tag of INPUT_TYPE)
 {
-  if (Array.isArray(options))
+  for (const name of [ToD3HtmlName(tag), ToD3HtmlName("input-" + tag)])
   {
-    return this.Children(options, 'option', function(elem) {
-      elem.html(id).attr('selected', function(i) {
-         return (i === selected? 'selected' : null);
-      });
-    });
+    fs.writeFileSync(`lib/selection/${name}.js`,
+`/**
+ * selection.${name}() creates &lt;input&gt; element of type ${tag}
+ * @param {string} [contents=''] option content html
+ * @return created element
+ */
+export default function (contents)
+{
+  return this.append('input')
+    .attr('type', type)
+    .html(contents || '');
+}
+`);
   }
-  else
-  {
-    return this.Children(Object.keys(options), 'option', function(elem) {
-      elem.html(function(i) { return options[i] })
-        .attr('value', id)
-        .attr('selected', function(i) {
-         return ((i === selected || options[i] === selected)? 'selected' : null);
-      });
-    });
-  }
-};
+}
 
-// events https://www.w3schools.com/tags/ref_eventattributes.asp
-[
+
+const EVENTS = [
   'afterprint',
   'beforeprint',
   'beforeunload',
@@ -273,27 +262,43 @@ selection.prototype.Options = function (options, selected)
   'waiting',
   'show',
   'toggle'
-].forEach(function (type)
+]
+
+// events https://www.w3schools.com/tags/ref_eventattributes.asp
+for (const tag of EVENTS)
 {
-  selection.prototype[ToD3HtmlName('on-' + type)] = function (value, capture)
+  for (const name of [ToD3HtmlName("on-" + tag)])
   {
-    if (arguments.length < 1)
-    {
-      return this.on(type);
-    }
-    else if (arguments.length < 2)
-    {
-      return this.on(type, value);
-    }
-    else
-    {
-      return this.on(type, value, capture);
-    }
-  };
-});
+    fs.writeFileSync(`lib/selection/${name}.js`,
+`/**
+ * selection.${name}() creates &lt;input&gt; element of type ${tag}
+ * @param {string} [value] option content html
+ * @param {boolean} [capture] option content html
+ * @return created element
+ */
+export default function (value, capture)
+{
+  if (arguments.length < 1)
+  {
+    return this.on(type);
+  }
+  else if (arguments.length < 2)
+  {
+    return this.on(type, value);
+  }
+  else
+  {
+    return this.on(type, value, capture);
+  }
+}
+`);
+  }
+}
+
+
 
 // common attributes https://www.w3schools.com/tags/ref_attributes.asp
-[
+const ATTRIBUTES = [
   'accept',
   'accesskey',
   'action',
@@ -324,44 +329,66 @@ selection.prototype.Options = function (options, selected)
   'tabindex',
   'target',
   'title',
-].forEach(function (type)
-{
-  selection.prototype[ToD3HtmlName(type)] = function(value)
-  {
-    if (arguments.length < 1)
-    {
-      return this.attr(type);
-    }
-    else
-    {
-      return this.attr(type, value);
-    }
-  };
-});
+]
 
-[
+for (const tag of ATTRIBUTES)
+{
+  for (const name of [ToD3HtmlName(tag)])
+  {
+    fs.writeFileSync(`lib/selection/${name}.js`,
+`/**
+ * selection.${name}() creates &lt;input&gt; element of type ${tag}
+ * @param {string} [value=''] option content html
+ * @return created element
+ */
+export default function (value)
+{
+  if (arguments.length < 1)
+  {
+    return this.attr('${tag}');
+  }
+  else
+  {
+    return this.attr('${tag}', value);
+  }
+}
+`);
+  }
+}
+
+const PROPERTIES = [
   'checked',
   'parentNode',
   'validity',
   'value',
-].forEach(function (type)
-{
-  selection.prototype[ToD3HtmlName(type)] = function(value)
-  {
-    if (arguments.length < 1)
-    {
-      return this.property(type);
-    }
-    else
-    {
-      return this.property(type, value);
-    }
-  };
-});
+];
 
+for (const tag of PROPERTIES)
+{
+  for (const name of [ToD3HtmlName(tag)])
+  {
+    fs.writeFileSync(`lib/selection/${name}.js`, `/**
+ * selection.${name}() creates &lt;input&gt; element of type ${tag}
+ * @param {string} [value=''] option content html
+ * @return created element
+ */
+export default function (value)
+{
+  if (arguments.length < 1)
+  {
+    return this.property(type);
+  }
+  else
+  {
+    return this.property(type, value);
+  }
+}
+`);
+  }
+}
 
 // style https://www.w3schools.com/cssref/
-[
+const STYLES = [
   'background',
   'background-attachment',
   'background-blend-mode',
@@ -512,29 +539,50 @@ selection.prototype.Options = function (options, selected)
   'outline-width',
   'resize',
   'text-overflow'
-].forEach(function (type)
+];
+
+for (const tag of STYLES)
 {
-  selection.prototype[ToD3HtmlName(type)] = function (value)
+  for (const name of [ToD3HtmlName(tag)])
   {
-    if (arguments.length < 1)
-    {
-      return this.style(type);
-    }
-    else
-    {
-      return this.style(type, value);
-    }
-  };
-});
+    fs.writeFileSync(`lib/selection/${name}.js`,
+`/**
+ * selection.${name}() creates &lt;input&gt; element of type ${tag}
+ * @param {string} [value=''] option content html
+ * @return created element
+ */
+export default function (value)
+{
+  if (arguments.length < 1)
+  {
+    return this.style(type);
+  }
+  else
+  {
+    return this.style(type, value);
+  }
+}
+`);
+  }
+}
 
-// enter / exit wrapper
-
-selection.prototype.Children = function(arrayData, childElementTagName, updateCallback)
+fs.writeFileSync(`lib/selection/Children.js`,
+`/**
+ * selection.Children() syncs children of an element to array of data elements
+ * @param {string} [arrayData=''] option content html
+ * @param {string} [childElementTagName=''] option content html
+ * @param {string} [updateCallback=''] option content html
+ * @return created element
+ */
+export default function (arrayData, childElementTagName, updateCallback)
 {
   var parent = this;
   // remove stray elements
   parent.selectAll(childNodesSelector)
-    .filter(function() { return this.tagName !== childElementTagName; })
+    .filter(function ()
+    {
+      return this.tagName !== childElementTagName;
+    })
     .remove();
   // synchronise intended elements
   var rows = parent.selectAll(childNodesSelector)
@@ -547,10 +595,65 @@ selection.prototype.Children = function(arrayData, childElementTagName, updateCa
   return this;
 }
 
-
-d3.HashStateRouter = function(context, dontRun)
+function childNodesSelector ()
 {
-  context.State = function(param, value)
+  return this.childNodes;
+}
+`);
+
+fs.writeFileSync(`lib/selection/Options.js`,
+`/**
+ * selection.Options() creates a list of &lt;option&gt; elements
+ * @param {string} [options=''] option content html
+ * @param {string} [selected=''] option content html
+ * @return created element
+ */
+export default function (options, selected)
+{
+  if (Array.isArray(options))
+  {
+    return this.Children(options, 'option', function (elem)
+    {
+      elem.html(id)
+        .attr('selected', function (i)
+        {
+          return (i === selected ? 'selected' : null);
+        });
+    });
+  }
+  else
+  {
+    return this.Children(Object.keys(options), 'option', function (elem)
+    {
+      elem.html(function (i)
+        {
+          return options[i]
+        })
+        .attr('value', id)
+        .attr('selected', function (i)
+        {
+          return ((i === selected || options[i] === selected) ? 'selected' : null);
+        });
+    });
+  }
+}
+
+function id (i)
+{
+  return i;
+}
+`);
+
+fs.writeFileSync(`lib/selection/HashStateRouter.js`,
+`/**
+ * selection.HashStateRouter()
+ * @param {string} [context=''] option content html
+ * @param {string} [dontRun=''] option content html
+ * @return created element
+ */
+export default function (context, dontRun)
+{
+  context.State = function (param, value)
   {
     if (arguments.length > 1)
     {
@@ -567,7 +670,7 @@ d3.HashStateRouter = function(context, dontRun)
     return context.params[param] || '';
   };
 
-  context.StateChangeLink = function(param, value)
+  context.StateChangeLink = function (param, value)
   {
     var params = {};
     for (var field in context.params)
@@ -588,7 +691,7 @@ d3.HashStateRouter = function(context, dontRun)
     return context.Link(params)
   };
 
-  context.Link = function(params)
+  context.Link = function (params)
   {
     var output = '#';
     for (var param in params)
@@ -602,34 +705,41 @@ d3.HashStateRouter = function(context, dontRun)
     return output;
   };
 
-  context.HashParams = function(input)
+  context.HashParams = function (input)
   {
     var params = {
       page: ''
     };
-    input.substr(1).split('&').map(function(x)
-    {
-      return x.split('=', 2);
-    }).forEach(function(fragment)
-    {
-      params[fragment[0]] = fragment[1] || true;
-    });
+    input.substr(1)
+      .split('&')
+      .map(function (x)
+      {
+        return x.split('=', 2);
+      })
+      .forEach(function (fragment)
+      {
+        params[fragment[0]] = fragment[1] || true;
+      });
     return params;
   };
 
-  context.SearchParams = function(input)
+  context.SearchParams = function (input)
   {
-    input.substr(1).split('&').map(function(x)
-    {
-      return x.split('=', 2);
-    }).forEach(function(fragment)
-    {
-      params[fragment[0]] = fragment[1] || true;
-    });
+    input.substr(1)
+      .split('&')
+      .map(function (x)
+      {
+        return x.split('=', 2);
+      })
+      .forEach(function (fragment)
+      {
+        params[fragment[0]] = fragment[1] || true;
+      });
   };
 
-  context.Reload = function () {
-    if(window.location.search)
+  context.Reload = function ()
+  {
+    if (window.location.search)
     {
       window.location.hash = context.Link(context.SearchParams(window.location.search));
       window.location.search = '';
@@ -645,7 +755,7 @@ d3.HashStateRouter = function(context, dontRun)
   context.params = context.params || {};
   if (!dontRun)
   {
-    window.onhashchange = function()
+    window.onhashchange = function ()
     {
       context.Reload();
     };
@@ -653,4 +763,19 @@ d3.HashStateRouter = function(context, dontRun)
     context.Reload();
   }
   return context;
-};
+}
+`);
+
+let output = `var d3 = window && window.d3 || require("d3-selection");
+var selection = d3.selection;
+`;
+
+for (const mod of fs.readdirSync('lib/selection'))
+{
+  const file = mod.substr(0, mod.indexOf('.'))
+  output += `import {default as ${file}} from "./selection/${file}";
+  selection.prototype.${file} = ${file};
+`;
+}
+
+fs.writeFileSync('lib/index.js', output);
