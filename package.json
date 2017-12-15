@@ -4,7 +4,11 @@
   "description": "verbose helper functions to make d3-selection bit less verbose for general html creation and manipulation",
   "main": "d3-html.js",
   "scripts": {
-    "build": "node src/codegen.js && rollup -f umd -o d3-html.js -- ./lib/index.js && uglifyjs d3-html.js -c -m -o d3-html.min.js"
+    "build": "npm run build0 && npm run build1 && npm run build2 && npm run build3",
+    "build0": "node src/codegen.js",
+    "build1": "rollup -f umd -o d3-html.js -- ./lib/index.js",
+    "build2": "uglifyjs d3-html.js -c -m -o d3-html.min.js",
+    "build3": "esdoc . && cp src/README.md . && cat index.md >> README.md"
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,18 @@
   },
   "homepage": "https://github.com/nahidakbar/d3-html#readme",
   "devDependencies": {
+    "esdoc": "^1.0.4",
+    "esdoc-publish-markdown-plugin": "^1.0.0",
     "rollup": "^0.52.1",
     "uglify-js": "^3.2.2"
+  },
+  "esdoc": {
+    "source": "./lib",
+    "destination": "./",
+    "plugins": [
+      {
+        "name": "esdoc-publish-markdown-plugin"
+      }
+    ]
   }
 }

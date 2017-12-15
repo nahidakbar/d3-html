@@ -2,6 +2,10 @@
 logs
 *.log
 npm-debug.log*
+node_*
+index.md
+README.md
+ast
 
 # Runtime data
 pids

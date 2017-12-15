@@ -9,11 +9,15 @@ export default function ()
 }
 `);
 
-function ToD3HtmlName(name) {
-  return name.split('-').map(function(fragment)
-  {
-    return fragment.substr(0, 1).toUpperCase() + fragment.substr(1);
-  }).join('');
+function ToD3HtmlName(name)
+{
+  return name.split('-')
+    .map(function (fragment)
+    {
+      return fragment.substr(0, 1)
+        .toUpperCase() + fragment.substr(1);
+    })
+    .join('');
 }
 
 const TAGS = [
@@ -129,7 +133,7 @@ for (const tag of TAGS)
 {
   const name = ToD3HtmlName(tag);
   fs.writeFileSync(`lib/selection/${name}.js`,
-`/**
+    `/**
  * selection.${name}() creates &lt;${tag}&gt; element
  * @param {string} [contents=''] option content html
  * @return created element
@@ -172,7 +176,7 @@ for (const tag of INPUT_TYPE)
   for (const name of [ToD3HtmlName(tag), ToD3HtmlName("input-" + tag)])
   {
     fs.writeFileSync(`lib/selection/${name}.js`,
-`/**
+      `/**
  * selection.${name}() creates &lt;input&gt; element of type ${tag}
  * @param {string} [contents=''] option content html
  * @return created element
@@ -270,7 +274,7 @@ for (const tag of EVENTS)
   for (const name of [ToD3HtmlName("on-" + tag)])
   {
     fs.writeFileSync(`lib/selection/${name}.js`,
-`/**
+      `/**
  * selection.${name}() creates &lt;input&gt; element of type ${tag}
  * @param {string} [value] option content html
  * @param {boolean} [capture] option content html
@@ -294,7 +298,6 @@ export default function (value, capture)
 `);
   }
 }
-
 
 
 // common attributes https://www.w3schools.com/tags/ref_attributes.asp
@@ -336,7 +339,7 @@ for (const tag of ATTRIBUTES)
   for (const name of [ToD3HtmlName(tag)])
   {
     fs.writeFileSync(`lib/selection/${name}.js`,
-`/**
+      `/**
  * selection.${name}() creates &lt;input&gt; element of type ${tag}
  * @param {string} [value=''] option content html
  * @return created element
@@ -546,7 +549,7 @@ for (const tag of STYLES)
   for (const name of [ToD3HtmlName(tag)])
   {
     fs.writeFileSync(`lib/selection/${name}.js`,
-`/**
+      `/**
  * selection.${name}() creates &lt;input&gt; element of type ${tag}
  * @param {string} [value=''] option content html
  * @return created element
@@ -567,7 +570,7 @@ export default function (value)
 }
 
 fs.writeFileSync(`lib/selection/Children.js`,
-`/**
+  `/**
  * selection.Children() syncs children of an element to array of data elements
  * @param {string} [arrayData=''] option content html
  * @param {string} [childElementTagName=''] option content html
@@ -602,7 +605,7 @@ function childNodesSelector ()
 `);
 
 fs.writeFileSync(`lib/selection/Options.js`,
-`/**
+  `/**
  * selection.Options() creates a list of &lt;option&gt; elements
  * @param {string} [options=''] option content html
  * @param {string} [selected=''] option content html
@@ -645,7 +648,7 @@ function id (i)
 `);
 
 fs.writeFileSync(`lib/selection/HashStateRouter.js`,
-`/**
+  `/**
  * selection.HashStateRouter()
  * @param {string} [context=''] option content html
  * @param {string} [dontRun=''] option content html
