@@ -33,3 +33,8 @@ export default function (options, selected)
     });
   }
 }
+
+function id (i)
+{
+  return i;
+}

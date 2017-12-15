@@ -14,9 +14,7 @@ const fs = require('fs');
 //   return this.childNodes;
 // }
 //
-// function id(i) {
-//   return i;
-// }
+
 
 //
 
@@ -661,6 +659,11 @@ export default function (options, selected)
         });
     });
   }
+}
+
+function id (i)
+{
+  return i;
 }
 `);
 
