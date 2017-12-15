@@ -1,4 +1,3 @@
-
 /**
  * selection.clear() empties selected container
  */

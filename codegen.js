@@ -30,8 +30,7 @@ const fs = require('fs');
 fs.writeFileSync('src/index.js', `
 `);
 
-fs.writeFileSync('src/selection/clear.js', `
-/**
+fs.writeFileSync('src/selection/clear.js', `/**
  * selection.clear() empties selected container
  */
 export default function ()
