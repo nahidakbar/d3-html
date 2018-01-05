@@ -1257,7 +1257,7 @@ selection.HangingPunctuation() get or change hanging-punctuation style value of 
 
 ## `HashStateRouter(context: object, dontRun: boolean): *`
 
-selection.HashStateRouter() Simple router that relies on window hash value. TODO: Document in more detail
+d3.HashStateRouter() Simple router that relies on window hash value. TODO: Document in more detail
 
 | Name | Type | Attribute | Description |
 | --- | --- | --- | --- |

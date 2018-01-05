@@ -2325,7 +2325,7 @@ var HangingPunctuation = function (value)
 };
 
 /**
- * selection.HashStateRouter() Simple router that relies on window hash value.
+ * d3.HashStateRouter() Simple router that relies on window hash value.
  *
  * TODO: Document in more detail
  *
@@ -6736,7 +6736,7 @@ selection.prototype.H4 = H4;
 selection.prototype.H5 = H5;
 selection.prototype.H6 = H6;
 selection.prototype.HangingPunctuation = HangingPunctuation;
-selection.prototype.HashStateRouter = HashStateRouter;
+d3.HashStateRouter = HashStateRouter;
 selection.prototype.Header = Header;
 selection.prototype.Height = Height;
 selection.prototype.Hidden = Hidden;

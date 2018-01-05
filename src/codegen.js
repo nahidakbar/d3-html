@@ -649,7 +649,7 @@ function id (i)
 
 fs.writeFileSync(`lib/selection/HashStateRouter.js`,
 `/**
- * selection.HashStateRouter() Simple router that relies on window hash value.
+ * d3.HashStateRouter() Simple router that relies on window hash value.
  *
  * TODO: Document in more detail
  *
@@ -778,10 +778,19 @@ var selection = d3.selection;
 
 for (const mod of fs.readdirSync('lib/selection'))
 {
-  const file = mod.substr(0, mod.indexOf('.'))
-  output += `import {default as ${file}} from "./selection/${file}";
-  selection.prototype.${file} = ${file};
+  const file = mod.substr(0, mod.indexOf('.'));
+  if (file.match(/(HashStateRouter)/))
+  {
+    output += `import {default as ${file}} from "./selection/${file}";
+    d3.${file} = ${file};
+`
+  }
+  else
+  {
+    output += `import {default as ${file}} from "./selection/${file}";
+    selection.prototype.${file} = ${file};
 `;
+  }
 }
 
 fs.writeFileSync('lib/index.js', output);
