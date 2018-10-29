@@ -731,6 +731,9 @@ export default function (context, dontRun)
 
   context.SearchParams = function (input)
   {
+    var params = {
+      page: ''
+    };
     input.substr(1)
       .split('&')
       .map(function (x)
@@ -741,6 +744,7 @@ export default function (context, dontRun)
       {
         params[fragment[0]] = fragment[1] || true;
       });
+    return params;
   };
 
   context.Reload = function ()
